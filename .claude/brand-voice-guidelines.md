@@ -168,6 +168,34 @@ ML/AI engineer who publishes novel architecture research (ICML) AND ships produc
 - Sign off with: "Best, Jennifer Minnich / quay-cncpts.com / 347.844.1684"
 - Do not attach resume unless asked -- offer to send it
 
+#### Gmail Filter Strategy
+
+Two filters route recruiter email. YES = auto-reply. NO = archive silently.
+
+**YES filter** -- remote + right title:
+- Has the words: `remote (ML OR "machine learning" OR "AI engineer" OR "data scientist" OR "agentic" OR "LLM")`
+- Action: Keep in Inbox, label `Jobs`, send template "Recruiter Auto-Reply"
+
+**NO filter** -- onsite/hybrid/wrong title:
+- Has the words: `onsite OR hybrid OR "on-site" OR "in-office" OR "in office" OR subject:("data mining" OR ".net" OR "graphic designer" OR "data entry" OR "business analyst" OR "QA" OR "devops")`
+- Action: Skip Inbox, Mark as read
+
+**NO filter** -- LinkedIn automated digests:
+- From: `jobs-noreply@linkedin.com OR jobalerts-noreply@linkedin.com OR messages-noreply@linkedin.com`
+- Action: Skip Inbox, Mark as read
+
+**Recruiter Auto-Reply Template** (saved in Gmail with resume PDF attached):
+```
+Jennifer Minnich | ML/AI Engineer | ICML 2026 Co-Author
+Remote Only | $80/hr+ W2 / $160k+ FTE | No exceptions
+
+If this role fits, send the JD and rate to quay@quay-cncpts.com.
+
+Best,
+Jennifer Minnich
+quay-cncpts.com | 347.844.1684
+```
+
 #### LinkedIn Posts
 - Lead with a concrete observation or lesson from real work
 - No hashtag spam -- 3 max if any
