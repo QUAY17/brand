@@ -1,7 +1,6 @@
 # Jennifer Quay Minnich
 
-- **Location**: Miami, Florida
-- **Remote**, EST
+- **Location**: Miami, Florida (Remote, EST)
 - **Email**: quay@quay-cncpts.com
 - **LinkedIn**: jennifer-quay-minnich
 - **Phone**: 347-844-1684 (text)
@@ -10,7 +9,7 @@
 
 ## Summary
 
-ML/AI Engineer | ICML 2026 co-author | 9+ years shipping production software | 4+ years LLM Laboratory Directed Research + Development | 4+ years building AI systems and governance infrastructure for DHS, HHS, and DOE  | Public Trust Clearance
+ML/AI Engineer | ICML 2026 co-author | 9+ years shipping production software | 4+ years LLM and ML Laboratory Directed Research + Development | 3+ years building AI systems and governance infrastructure for US federal government
 
 ## Credentials
 United States Citizen | Public Trust Clearance | 9+ yrs of Software Engineering
@@ -43,17 +42,17 @@ B.S., M.S. in Computer Science (Machine Learning focus)
 ## Experience
 
 ### ML/AI Engineer, Senior Data Scientist | Arch Systems Inc. | Nov 2024 - present
-Baltimore, MD (Remote) | Federal contractor | Public Trust Clearance
+Baltimore, MD (Remote) | Federal contractor
 
 - Identified $9M+ in cost savings for DHS-USCIS by developing the enterprise architecture Technical Reference Model, consolidating 15 ungoverned data sources into a single authoritative governance database.
 - Patent pending: JENNY, an Intelligent Document Generator with smart architecture that reduces LLM token usage by 88% and cuts document generation costs by 15-25x. Nominated for the 2026 Emerging Technology and Innovation Awards.
 - Delivered cross-model security evaluation for DHS internal chatbot deployment, comparing OpenAI and Anthropic on performance, security, compliance, and mission fit.
 - Evaluated Credal AI platform across 150 pilot users for HHS-ACF Chief AI Officer, producing a suite of analytics that informed enterprise purchase decision.
 - Built the AI Constitution Testing framework for HHS-ACF Chief AI Officer, with 15+ testing strategies and red team datasets for child welfare policy compliance.
-- Automated DHS-FEMA operational reporting and ACF-OHS helpdesk ticket routing, reducing hours of manual lift by half for furloughed personnel.
+- Automated DHS-FEMA operational reporting and ACF-OHS helpdesk ticket routing, reducing hours of manual lift for personnel.
 
-### Machine Learning Engineer | ICASA | Jan 2022 - Nov 2024
-Socorro, NM (Remote) | Federal contractor for DOE, State Contractor for NM State Higher Education, NM Legislative Committee
+### Machine Learning Engineer | ICASA (NMT) | Jan 2022 - Nov 2024
+Socorro, NM (Remote) | Federal contractor for DOE | Government Contractor for the State of New Mexico
 
 - Co-authored novel LLM architecture (Stream Recursion Model) submitted to ICML 2026, funded by Sandia National Labs/DOE. Achieved GPT-2 performance at half the parameters.
 - Secured $1M state funding for healthcare workforce dashboard by building a central source of truth database and analyzing coverage gaps statewide.
@@ -61,8 +60,8 @@ Socorro, NM (Remote) | Federal contractor for DOE, State Contractor for NM State
 - Achieved 92.5% accuracy on natural language to SQL generation against 14 years of state tax data, benchmarking three approaches (fine-tuned Llama 2, LangChain, LlamaIndex).
 - Delivered ML training series to cross-functional teams, accelerating internal adoption of ML and AI tooling across the organization.
 
-### Data Scientist (Intern to Hire) | ICASA / NM Tech Office of Institutional Research | Feb 2020 - Jan 2022
-Socorro, NM (Remote) | NM State Higher Education contract
+### Data Scientist | ICASA (NMT) | Feb 2020 - Jan 2022
+Socorro, NM (Remote) | Government Contractor for the State of New Mexico
 
 - Hired full-time after internship based on performance and traction of instiitutional research in ML and AI.
 - Research fellow on the Laboratory Directed Research and Development project Gold Pickaxe, studied entity relationships of Github events with graph neural networks and predicted next events.
@@ -70,7 +69,7 @@ Socorro, NM (Remote) | NM State Higher Education contract
 
 
 ### Software Engineer | Consumer 51 | Apr 2017 - Feb 2020
-Philadelphia, PA (Remote) | International e-commerce and consumer technology consultant
+Philadelphia, PA (Remote) | International consumer technology consultant
 
 - Shipped full-stack web applications (Python, JavaScript, SQL) for enterprise e-commerce clients across international markets.
 - Built consumer analytics dashboards in Tableau tracking sales and behavior patterns across multiple product lines.
@@ -158,6 +157,12 @@ Remote
 - Deployed as Kubernetes-hosted React dashboard with Docker containerization and Helm charts.
 - Created real-time data exploration of keywords and themes using drill-down visualizations and FastAPI.
 
+**2023 | Natural Language Interface for NM Tax Data**
+- Fine-tuned Meta AI Llama 2 using HuggingFace and PyTorch, achieving 92.5% accuracy for NL-to-SQL generation.
+- Implemented LlamaIndex and LangChain for optimized RAG.
+- Deployed on GCP Vertex AI with MongoDB document store.
+
+
 ### Research & Development
 
 **2026 | Stream Recursion Model (SRM): A Novel LLM Architecture**
@@ -170,19 +175,15 @@ Remote
 - Built and trained TensorFlow neural network models profiling repository users.
 - Predicted next user activity from repository behavior patterns.
 
-**2023 | Natural Language Interface for NM Tax Data**
-- Fine-tuned Meta AI Llama 2 using HuggingFace and PyTorch, achieving 92.5% accuracy for NL-to-SQL generation.
-- Implemented LlamaIndex and LangChain for optimized RAG.
-- Deployed on GCP Vertex AI with MongoDB document store.
 
 ---
 
 ## References
 
+**Justin Hoffman** | Director of AI Software Engineering | Arch Systems Inc., Federal Contractor | jhoffman@archsystemsinc.com | (210) 875-8278
+
+
 **Jane Yang** | Chief Artificial Intelligence Officer, ACF Tech | Administration for Children and Families, US Department of Health and Human Services | jane.yang@acf.hhs.gov | (202) 545-4952
-
-**Justin Hoffman** | Principal AI Data Scientist | Arch Systems | jhoffman@archsystemsinc.com | (210) 875-8278
-
 ---
 
 ## Education (Detail)
