@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r claude-code-setup/.claude .)",
+      "Bash(cp claude-code-setup/CLAUDE.md .)",
+      "Bash(mkdir -p resume linkedin cover-letters website messaging)",
+      "Bash(cp claude-code-setup/resume/resume-source.md resume/)",
+      "Bash(cp claude-code-setup/resume/md_to_latex_resume.py resume/)",
+      "Bash(rm resume-source.md md_to_latex_resume.py jennifer_generated.tex)",
+      "Bash(rm -rf claude-code-setup)"
+    ]
+  }
+}
