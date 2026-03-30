@@ -7,7 +7,8 @@
       "Bash(cp claude-code-setup/resume/resume-source.md resume/)",
       "Bash(cp claude-code-setup/resume/md_to_latex_resume.py resume/)",
       "Bash(rm resume-source.md md_to_latex_resume.py jennifer_generated.tex)",
-      "Bash(rm -rf claude-code-setup)"
+      "Bash(rm -rf claude-code-setup)",
+      "Bash(gh auth:*)"
     ]
   }
 }

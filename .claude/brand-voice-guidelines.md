@@ -51,9 +51,10 @@ The voice across all content should communicate: I do the research, I build the 
 - **What to avoid**: Listing tools without context. Every tool mentioned should connect to a decision or outcome.
 
 #### Direct
-- **What it means**: Respect the reader's time. First sentence carries the weight.
-- **How it shows up**: Short email signatures. No preamble in cover letters. Resume bullets that start with the strongest verb.
-- **What to avoid**: Filler phrases like "I am writing to express my interest in..." or "I believe I would be a great fit."
+- **What it means**: Respect the reader's time. First sentence carries the weight. Say what you did, not what it sounds like you did.
+- **How it shows up**: Short email signatures. No preamble in cover letters. Resume bullets that start with the strongest verb. Plain language over jargon -- always. If a sentence reads like a consulting slide deck, rewrite it until a person would actually say it out loud.
+- **What to avoid**: Filler phrases like "I am writing to express my interest in..." or "I believe I would be a great fit." Jargon-stacked sentences that sound impressive but communicate nothing. Modifier pileups ("comprehensive automated real-time scalable"). Trailing filler ("enabling executive-level decision-making").
+- **The rule**: If you strip out all the adjectives and buzzwords and the sentence says nothing, the sentence was never saying anything. Start over.
 
 #### Versatile
 - **What it means**: The ability to operate across the full stack of data/ML/AI work -- from ETL and data governance through model training to executive dashboards.
@@ -202,6 +203,13 @@ ML/AI engineer who publishes novel architecture research (ICML) AND ships produc
 | various | Vague | Name the specific things |
 | cutting-edge | Overused buzzword | Name the specific technology or approach |
 | rock star / ninja / guru | Unprofessional | Senior Engineer, Principal, Lead |
+| comprehensive | Filler -- everything claims to be comprehensive | Describe what it actually covers |
+| advanced analytics | Vague buzzword | Name the specific method (clustering, forecasting, etc.) |
+| innovative / innovation | Says nothing -- the work should show it | Describe what was new and why it mattered |
+| robust / scalable (without evidence) | Empty modifiers | State the actual scale or resilience metric |
+| integrating [buzzword] capabilities | Jargon padding | Say what the system does in plain language |
+| enabling [stakeholder]-level [noun] | Filler ending for bullets | End with the actual outcome or cut the sentence shorter |
+| dynamic [anything] | Almost always meaningless | Say what changes and why |
 
 ### Never-Use Terms
 | Term | Reason |
@@ -239,6 +247,18 @@ ML/AI engineer who publishes novel architecture research (ICML) AND ships produc
 3. **"Worked on various projects"** -- Problem: vague, no signal. Better: Name the projects and outcomes.
 4. **"I am a highly motivated professional"** -- Problem: tells instead of shows. Better: Let the ICML paper and federal clients speak for themselves.
 5. **Long paragraphs in emails to recruiters** -- Problem: recruiters skim. Better: 3-5 sentences, state what you want, move on.
+6. **Jargon stacking** -- Problem: stringing together buzzwords that sound technical but say nothing. "Designed AI assistant-style architectures integrating retrieval, evaluation, and dynamic prompt routing pipelines" is meaningless. Better: Say what the system does and who uses it. "Built automated ticket routing with AI-assisted escalation."
+7. **Filler endings** -- Problem: bullets that trail off into "enabling executive-level decision-making" or "driving actionable insights." If you cannot name the specific decision or insight, cut the ending.
+8. **Modifier stacking** -- Problem: "comprehensive automated real-time scalable" before a noun. Pick the one that matters most. If none of them add information, drop them all.
+
+### The Jargon Test
+
+Before publishing any bullet or sentence, apply this test: **Could a non-technical hiring manager understand what you did and why it mattered?** If the sentence only makes sense to someone who already knows the work, rewrite it. Being technical means naming specific tools and decisions -- not stacking abstractions.
+
+- Bad: "Designed AI assistant-style architectures integrating retrieval, evaluation, and dynamic prompt routing pipelines"
+- Good: "Built automated ticket routing with AI-assisted escalation for 150 monthly helpdesk requests"
+- Bad: "Developed comprehensive data analysis system integrating multiple data sources"
+- Good: "Built RAG-based analysis system combining survey data with GPT-4o for design research"
 
 ---
 
