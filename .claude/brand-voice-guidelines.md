@@ -153,6 +153,15 @@ ML/AI engineer who publishes novel architecture research (ICML) AND ships produc
 - Architecture diagram or pipeline overview if the project has multiple components
 - Do not include badges or shields unless they convey real information (build status, coverage)
 
+#### Compensation & Work Arrangement
+
+- **Remote only. No exceptions.**
+- **$80/hr+ W2 / $160k+ FTE base.** This is the floor, not the target.
+- Titles: ML/AI Engineer, Senior Data Scientist. Will consider AI Engineer, LLM Engineer, Principal Data Scientist.
+- Do not engage with roles below the floor. A polite "that's below my range" is sufficient.
+- Do not negotiate against yourself. State the number, let them respond.
+- Context: ICML co-author + Public Trust + 9+ years production software + federal AI governance + $9M savings identification. That combination commands this rate.
+
 #### Recruiter/Job Search Emails
 - Keep to 3-5 sentences max
 - State role interest, availability, and comp expectations clearly

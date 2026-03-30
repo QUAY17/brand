@@ -45,6 +45,7 @@ def parse_markdown(md_path: str) -> dict:
         "name_first": "",
         "name_last": "",
         "location": "",
+        "remote": "",
         "phone": "",
         "email": "",
         "linkedin": "",
@@ -80,6 +81,8 @@ def parse_markdown(md_path: str) -> dict:
         # Contact info
         if line.startswith("- **Location**:"):
             resume["location"] = line.split(":", 1)[1].strip()
+        elif line.startswith("- **Remote**"):
+            resume["remote"] = line.split("**", 2)[-1].strip().lstrip(",").strip()
         elif line.startswith("- **Phone**:"):
             resume["phone"] = line.split(":", 1)[1].strip()
         elif line.startswith("- **Email**:"):
@@ -217,10 +220,13 @@ def generate_latex(resume: dict) -> str:
 
     # Personal data
     tex.append(rf"\name{{{esc(resume['name_first'])}}}{{{esc(resume['name_last'])}}}")
-    tex.append(rf"\address{{{esc(resume['location'])}}}")
-    tex.append(rf"\phone{{{resume['phone']}}}")
-    tex.append(rf"\social[linkedin]{{{resume['linkedin']}}}")
+    address = esc(resume["location"])
+    if resume.get("remote"):
+        address += r" \\ " + f"Remote, {esc(resume['remote'])}"
+    tex.append(rf"\address{{{address}}}")
     tex.append(rf"\email{{{resume['email']}}}")
+    tex.append(rf"\social[linkedin]{{{resume['linkedin']}}}")
+    tex.append(rf"\phone{{{resume['phone']}}}")
     tex.append(r"\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}")
     tex.append("")
     tex.append(r"\begin{document}")
