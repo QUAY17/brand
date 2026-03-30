@@ -1,28 +1,29 @@
 # Brand
 
-Personal brand hub — resume, LinkedIn content, cover letters, website copy, and brand messaging.
+Personal brand hub for Jennifer Quay Minnich. Single source of truth for resume, cover letters, LinkedIn content, website copy, and brand messaging.
 
 ## Structure
 
 ```
-.claude/                  Brand voice guidelines (auto-loaded by Claude Code)
-CLAUDE.md                 Project instructions for Claude Code
-resume/                   Resume source (markdown) + LaTeX converter
-linkedin/                 LinkedIn profile rewrites and post drafts
-cover-letters/            Tailored cover letters
-website/                  Website copy and content
-messaging/                Brand positioning, talking points, elevator pitches
+resume/           Resume source (Markdown) + LaTeX and DOCX generators
+cover-letters/    Tailored cover letters
+linkedin/         LinkedIn profile and post drafts
+website/          Website copy for quay-cncpts.com
+messaging/        Brand positioning and talking points
+.claude/          Brand voice guidelines
+```
+
+## Resume Workflow
+
+The resume source of truth is `resume/resume-source.md`. Generate both output formats:
+
+```bash
+cd resume
+python md_to_latex_resume.py   # -> jennifer.tex
+python md_to_docx_resume.py    # -> jennifer.docx
+pdflatex jennifer.tex          # -> jennifer.pdf
 ```
 
 ## Brand Voice
 
-All content follows the guidelines in `.claude/brand-voice-guidelines.md`. Claude Code enforces these automatically.
-
-## Resume Workflow
-
-```bash
-cd resume
-# edit resume-source.md, then:
-python md_to_latex_resume.py --input resume-source.md --output jennifer.tex
-pdflatex jennifer.tex
-```
+All content follows `.claude/brand-voice-guidelines.md`. Key rules: lead with outcomes, use strong active verbs, name specific tools and frameworks, no filler.
