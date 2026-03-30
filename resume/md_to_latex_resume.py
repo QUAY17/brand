@@ -48,6 +48,7 @@ def parse_markdown(md_path: str) -> dict:
         "phone": "",
         "email": "",
         "linkedin": "",
+        "summary": "",
         "credentials": "",
         "education_summary": "",
         "technical": [],
@@ -138,6 +139,10 @@ def parse_markdown(md_path: str) -> dict:
             i += 1
             continue
 
+        # Summary
+        if current_section == "Summary" and line.strip() and not line.startswith("#"):
+            resume["summary"] = line.strip()
+
         # Credentials
         if current_section == "Credentials" and line.strip():
             resume["credentials"] = line.strip()
@@ -222,12 +227,22 @@ def generate_latex(resume: dict) -> str:
     tex.append(r"\makecvtitle")
     tex.append("")
 
+    # Summary
+    if resume["summary"]:
+        # Replace | with centered dot, escape text but not the LaTeX commands
+        parts = [esc(p.strip()) for p in resume["summary"].split("|")]
+        summary_line = r" $\cdot$ ".join(parts)
+        tex.append(r"\noindent")
+        tex.append(rf"{summary_line}")
+        tex.append(r"\vspace{6pt}")
+        tex.append("")
+
     # Credentials
     if resume["credentials"]:
-        # Replace | with centered dot
-        cred = resume["credentials"].replace("|", r"$\cdot$")
+        parts = [esc(p.strip()) for p in resume["credentials"].split("|")]
+        cred_line = r" $\cdot$ ".join(parts)
         tex.append(r"\noindent")
-        tex.append(rf"\textbf{{Clearance \& Credentials:}} {esc(cred)}")
+        tex.append(rf"\textbf{{Clearance \& Credentials:}} {cred_line}")
         tex.append("")
 
     # Education summary
@@ -242,10 +257,12 @@ def generate_latex(resume: dict) -> str:
         tex.append(r"\section{Technical Proficiency}")
         tex.append(r"\noindent")
         for idx, (category, items) in enumerate(resume["technical"]):
-            items_escaped = esc(items).replace(",", r" $\cdot$")
+            # Split on commas but preserve commas inside parentheses
+            parts = re.split(r",\s*(?![^()]*\))", items)
+            items_formatted = r" $\cdot$ ".join(esc(p.strip()) for p in parts)
             if idx > 0:
                 tex.append(r"\newline \noindent")
-            tex.append(rf"\textbf{{{esc(category)}:}} {items_escaped}")
+            tex.append(rf"\textbf{{{esc(category)}:}} {items_formatted}")
         tex.append("")
 
     # Publication
