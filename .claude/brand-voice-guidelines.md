@@ -34,38 +34,43 @@ The voice across all content should communicate: I do the research, I build the 
 | Role | Color | Hex | Usage |
 |------|-------|-----|-------|
 | **Primary** | Orange | `#E07020` | Logo only -- reserved exclusively for the QUAY wordmark |
-| **Accent** | Gold | `#C9A84C` | Highlight text, link hovers, data callouts |
-| **Background** | Charcoal | `#2F3136` | Primary background for web and dark presentations |
+| **Accent** | Gold | `#C9A84C` | Highlight stat text, link hovers, data callouts |
+| **Background** | Charcoal | `#2F3136` | Primary background for web, presentations, and brand assets |
 | **Text (primary)** | Light gray | `#E4E6E9` | Body text on dark backgrounds |
 | **Text (secondary)** | Gray | `#B0B5BC` | Taglines, supporting text |
 | **Text (tertiary)** | Dim gray | `#7A8290` | Labels, metadata, footer text |
-| **Ambient: Purple** | Deep purple | `#2D1B69` | Ambient glow effect (bottom-left) |
-| **Ambient: Blue** | Electric blue | `#2563EB` | Ambient glow effect (bottom-right) |
-| **Ambient: Gold** | Gold | `#C9A84C` | Ambient glow effect (bottom-center) |
+| **Ambient: Purple** | Deep purple | `#3D1A6E` to `#2A1250` | Two-tone glow (bottom-left) |
+| **Ambient: Blue** | Electric blue | `#1D4ED8` to `#162E6E` | Two-tone glow (right, mid-height) |
+| **Ambient: Gold** | Dark gold | `#B8891A` to `#7A5C12` | Two-tone glow (bottom-center) |
+| **Ambient: Magenta** | Purple-magenta | `#5B21B6` to `#3B1578` | Two-tone glow (top-left) |
+| **Ambient: Navy** | Deep navy | `#152D55` to `#0E1F3A` | Two-tone glow (top-right) |
 
 ### Color Rules
 
 - Orange is **exclusively** for the QUAY wordmark. No other element on the page uses orange.
-- Gold is the secondary accent for all interactive and highlight elements.
-- The ambient glow (purple, blue, gold) creates a subtle aurora effect that evokes the original Quay Concepts abstract imagery -- deep blues, purples, and gold speckles. These are CSS radial gradients with heavy blur (`filter: blur(120px)`) and animated opacity pulsing between 0.35 and 0.6.
+- Gold (`#C9A84C`) is the secondary accent for all interactive and highlight elements.
+- The ambient glow uses five orbs creating an aurora effect that evokes the original Quay Concepts abstract imagery. Each orb uses a two-tone radial gradient for depth. CSS `filter: blur(50px)` on desktop, `blur(40px)` on mobile. Orbs are sized in `vw` units so they scale with viewport.
+- Glow orbs drift slowly (14-20s cycles) with subtle translate and scale transforms. Purple and magenta are pulled back in opacity; blue and gold are boosted for color contrast.
 
 ### Typography
 
 | Element | Font | Weight | Notes |
 |---------|------|--------|-------|
-| Logo (QUAY) | Orbitron | 400 (Light) | Matches the original geometric wordmark |
-| Tagline | Inter | 300 (Light) | Letter-spacing: 0.25em |
-| Body/highlights | Inter | 300-500 | Primary content font |
-| Highlight labels | Inter | 400 | Uppercase, letter-spacing: 0.3em |
-| Highlight stats | Inter | 500 (Medium) | Gold accent color |
+| Logo (Quay) | Orbitron | 400 (Light) | Title case. Matches the original geometric wordmark. |
+| Tagline | Inter | 300 (Light) | Title case. Letter-spacing: 0.25em. Not uppercase. |
+| Highlight labels | Inter | 400 | CSS uppercase, letter-spacing: 0.3em |
+| Highlight stats | Inter | 500 (Medium) | CSS uppercase, letter-spacing: 0.08em, gold accent color |
+| Links | Inter | 400 | CSS uppercase, letter-spacing: 0.2em |
 
 ### Design Principles
 
-- **One screen, no scroll**: The site fits entirely in a single viewport. No navigation, no sections, no pages.
-- **Logo-forward**: QUAY dominates the visual hierarchy. Everything else supports it.
-- **Ambient glow**: Three pulsing radial gradient orbs (purple, blue, gold) at the bottom of the viewport create depth and life without competing with content.
-- **Rotating highlights**: Key stats cycle with a slide-up/slide-out animation. Each has a single past-tense verb label (Published, Saved, Patented, Architected, Cleared, Shipped, Built, Deployed) above a gold stat line.
+- **One screen, no scroll**: The site fits entirely in a single viewport. `overflow: hidden` on html/body. No navigation, no sections, no pages.
+- **Logo-forward**: Quay in Orbitron dominates the visual hierarchy. Title case (not all caps). Everything else supports it.
+- **Ambient glow**: Five drifting radial gradient orbs (purple, blue, gold, magenta, navy) spread across the full viewport create depth and life. Sized in `vw` units for responsive scaling. Low blur for visible ripple edges.
+- **Rotating highlights**: Key stats cycle with a slide-up/slide-out animation. Each has a single past-tense verb label (Published, Saved, Patented, Cut, Cleared, Shipped, Built, Deployed) above an uppercase gold stat line.
 - **Minimal**: No images, no icons, no borders, no cards. Just type, color, and light.
+- **Favicon**: Orbitron Q glyph path in orange on charcoal with ambient gradient background. SVG format.
+- **LinkedIn profile image**: Quay wordmark (Orbitron glyph paths, title case) with tagline on ambient gradient background. "Designing Intelligence" left-aligned, "Developing the Future" right-aligned under the logo.
 
 ---
 
