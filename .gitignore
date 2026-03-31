@@ -15,3 +15,12 @@ Thumbs.db
 # Sensitive files
 *.env
 credentials.*
+
+# Claude settings
+.claude/settings.local.json
+
+# Site plan (outdated)
+website/site-plan.md
+
+# Old logo assets
+website/quay-logo.png
