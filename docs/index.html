@@ -45,7 +45,7 @@
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(50px);
       pointer-events: none;
       z-index: 0;
     }
@@ -54,7 +54,7 @@
     .glow-1 {
       width: 45vw;
       height: 45vw;
-      background: radial-gradient(circle, #5B2D9E 0%, transparent 60%);
+      background: radial-gradient(circle, #3D1A6E 0%, #2A1250 40%, transparent 60%);
       bottom: -15%;
       left: -10%;
       animation: drift1 14s ease-in-out infinite;
@@ -64,19 +64,19 @@
     .glow-2 {
       width: 50vw;
       height: 50vw;
-      background: radial-gradient(circle, #3B82F6 0%, transparent 60%);
+      background: radial-gradient(circle, #1D4ED8 0%, #162E6E 40%, transparent 60%);
       top: 5%;
       right: -12%;
       animation: drift2 17s ease-in-out infinite;
     }
 
-    /* Gold - bottom right - boosted, repositioned */
+    /* Gold - bottom center - original placement */
     .glow-3 {
       width: 45vw;
       height: 45vw;
-      background: radial-gradient(circle, #D4A020 0%, transparent 55%);
-      bottom: -10%;
-      right: 15%;
+      background: radial-gradient(circle, #B8891A 0%, #7A5C12 40%, transparent 55%);
+      bottom: -15%;
+      left: 30%;
       animation: drift3 20s ease-in-out infinite;
     }
 
@@ -84,7 +84,7 @@
     .glow-4 {
       width: 30vw;
       height: 30vw;
-      background: radial-gradient(circle, #7C3AED 0%, transparent 60%);
+      background: radial-gradient(circle, #5B21B6 0%, #3B1578 40%, transparent 60%);
       top: -8%;
       left: -5%;
       animation: drift4 16s ease-in-out infinite;
@@ -94,7 +94,7 @@
     .glow-5 {
       width: 40vw;
       height: 40vw;
-      background: radial-gradient(circle, #1E3A6E 0%, transparent 60%);
+      background: radial-gradient(circle, #152D55 0%, #0E1F3A 40%, transparent 60%);
       top: -15%;
       right: 5%;
       animation: drift5 19s ease-in-out infinite;
@@ -269,40 +269,40 @@
       }
 
       .glow {
-        filter: blur(80px);
+        filter: blur(40px);
       }
 
       .glow-1 {
-        width: 300px;
-        height: 300px;
+        width: 60vw;
+        height: 60vw;
         bottom: -5%;
         left: -15%;
       }
 
       .glow-2 {
-        width: 250px;
-        height: 250px;
-        top: 15%;
+        width: 55vw;
+        height: 55vw;
+        top: 10%;
         right: -15%;
       }
 
       .glow-3 {
-        width: 200px;
-        height: 200px;
+        width: 50vw;
+        height: 50vw;
         bottom: -10%;
         left: 25%;
       }
 
       .glow-4 {
-        width: 250px;
-        height: 250px;
+        width: 45vw;
+        height: 45vw;
         top: -5%;
         left: -10%;
       }
 
       .glow-5 {
-        width: 250px;
-        height: 250px;
+        width: 50vw;
+        height: 50vw;
         top: -10%;
         right: 5%;
       }
