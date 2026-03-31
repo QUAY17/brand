@@ -27,6 +27,48 @@ The voice across all content should communicate: I do the research, I build the 
 
 ---
 
+## Visual Identity
+
+### Color Palette
+
+| Role | Color | Hex | Usage |
+|------|-------|-----|-------|
+| **Primary** | Orange | `#E07020` | Logo only -- reserved exclusively for the QUAY wordmark |
+| **Accent** | Gold | `#C9A84C` | Highlight text, link hovers, data callouts |
+| **Background** | Charcoal | `#2F3136` | Primary background for web and dark presentations |
+| **Text (primary)** | Light gray | `#E4E6E9` | Body text on dark backgrounds |
+| **Text (secondary)** | Gray | `#B0B5BC` | Taglines, supporting text |
+| **Text (tertiary)** | Dim gray | `#7A8290` | Labels, metadata, footer text |
+| **Ambient: Purple** | Deep purple | `#2D1B69` | Ambient glow effect (bottom-left) |
+| **Ambient: Blue** | Electric blue | `#2563EB` | Ambient glow effect (bottom-right) |
+| **Ambient: Gold** | Gold | `#C9A84C` | Ambient glow effect (bottom-center) |
+
+### Color Rules
+
+- Orange is **exclusively** for the QUAY wordmark. No other element on the page uses orange.
+- Gold is the secondary accent for all interactive and highlight elements.
+- The ambient glow (purple, blue, gold) creates a subtle aurora effect that evokes the original Quay Concepts abstract imagery -- deep blues, purples, and gold speckles. These are CSS radial gradients with heavy blur (`filter: blur(120px)`) and animated opacity pulsing between 0.35 and 0.6.
+
+### Typography
+
+| Element | Font | Weight | Notes |
+|---------|------|--------|-------|
+| Logo (QUAY) | Orbitron | 400 (Light) | Matches the original geometric wordmark |
+| Tagline | Inter | 300 (Light) | Letter-spacing: 0.25em |
+| Body/highlights | Inter | 300-500 | Primary content font |
+| Highlight labels | Inter | 400 | Uppercase, letter-spacing: 0.3em |
+| Highlight stats | Inter | 500 (Medium) | Gold accent color |
+
+### Design Principles
+
+- **One screen, no scroll**: The site fits entirely in a single viewport. No navigation, no sections, no pages.
+- **Logo-forward**: QUAY dominates the visual hierarchy. Everything else supports it.
+- **Ambient glow**: Three pulsing radial gradient orbs (purple, blue, gold) at the bottom of the viewport create depth and life without competing with content.
+- **Rotating highlights**: Key stats cycle with a slide-up/slide-out animation. Each has a single past-tense verb label (Published, Saved, Patented, Architected, Cleared, Shipped, Built, Deployed) above a gold stat line.
+- **Minimal**: No images, no icons, no borders, no cards. Just type, color, and light.
+
+---
+
 ## We Are / We Are Not
 
 | We Are | We Are Not |
