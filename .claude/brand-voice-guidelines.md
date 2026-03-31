@@ -34,23 +34,26 @@ The voice across all content should communicate: I do the research, I build the 
 | Role | Color | Hex | Usage |
 |------|-------|-----|-------|
 | **Primary** | Orange | `#E07020` | Logo only -- reserved exclusively for the QUAY wordmark |
-| **Accent** | Gold | `#C9A84C` | Highlight stat text, link hovers, data callouts |
-| **Background** | Charcoal | `#2F3136` | Primary background for web, presentations, and brand assets |
+| **Accent** | Gold | `#e4bd54` | Highlight stat text, link hovers, data callouts |
+| **Background** | Warm charcoal | `#2C2A30` | Primary background for web, presentations, and brand assets |
 | **Text (primary)** | Light gray | `#E4E6E9` | Body text on dark backgrounds |
 | **Text (secondary)** | Gray | `#B0B5BC` | Taglines, supporting text |
 | **Text (tertiary)** | Dim gray | `#7A8290` | Labels, metadata, footer text |
-| **Ambient: Purple** | Deep purple | `#3D1A6E` to `#2A1250` | Two-tone glow (bottom-left) |
-| **Ambient: Blue** | Electric blue | `#1D4ED8` to `#162E6E` | Two-tone glow (right, mid-height) |
-| **Ambient: Gold** | Dark gold | `#B8891A` to `#7A5C12` | Two-tone glow (bottom-center) |
-| **Ambient: Magenta** | Purple-magenta | `#5B21B6` to `#3B1578` | Two-tone glow (top-left) |
-| **Ambient: Navy** | Deep navy | `#152D55` to `#0E1F3A` | Two-tone glow (top-right) |
+| **Ambient: Purple** | Soft purple | `#4A2385` to `#2E1555` | Breathing glow (bottom-left) |
+| **Ambient: Blue** | Steel blue | `#1E50C0` to `#0F2860` | Breathing glow (right, mid-height) |
+| **Ambient: Gold** | Warm gold | `#8A7232` to `#584920` | Breathing glow (bottom-center) |
+| **Ambient: Amber** | Warm amber | `#7A3D12` to `#45220A` | Breathing glow (bottom-right) |
+| **Ambient: Violet** | Soft violet | `#3A1B65` to `#1E0E35` | Breathing glow (top-left) |
+| **Ambient: Navy** | Muted blue | `#1A4A9E` to `#0C2550` | Breathing glow (top-right) |
 
 ### Color Rules
 
 - Orange is **exclusively** for the QUAY wordmark. No other element on the page uses orange.
-- Gold (`#C9A84C`) is the secondary accent for all interactive and highlight elements.
-- The ambient glow uses five orbs creating an aurora effect that evokes the original Quay Concepts abstract imagery. Each orb uses a two-tone radial gradient for depth. CSS `filter: blur(50px)` on desktop, `blur(40px)` on mobile. Orbs are sized in `vw` units so they scale with viewport.
-- Glow orbs drift slowly (14-20s cycles) with subtle translate and scale transforms. Purple and magenta are pulled back in opacity; blue and gold are boosted for color contrast.
+- Gold (`#e4bd54`) is the secondary accent for all interactive and highlight elements.
+- The ambient glow uses six orbs (purple, blue, gold, amber, violet, navy) creating soft breathing color washes. Each orb uses a two-tone radial gradient with `filter: blur(80px)` for smooth, sophisticated blending. Orbs are sized in `vw` units so they scale with viewport.
+- Glow orbs breathe slowly (24-30s cycles) with opacity pulsing from ~0.2 to ~0.6 and `scale(1.15-1.2)` transforms. The effect is meditative, not attention-grabbing.
+- Water drop ripple rings (charcoal-colored, `rgba(44,42,48,0.6)`) expand slowly outward from each color region, creating concentric depth as the colors breathe.
+- Page fades in over 2.2s on load to avoid a hard start with bright colors.
 
 ### Typography
 
@@ -66,7 +69,7 @@ The voice across all content should communicate: I do the research, I build the 
 
 - **One screen, no scroll**: The site fits entirely in a single viewport. `overflow: hidden` on html/body. No navigation, no sections, no pages.
 - **Logo-forward**: Quay in Orbitron dominates the visual hierarchy. Title case (not all caps). Everything else supports it.
-- **Ambient glow**: Five drifting radial gradient orbs (purple, blue, gold, magenta, navy) spread across the full viewport create depth and life. Sized in `vw` units for responsive scaling. Low blur for visible ripple edges.
+- **Ambient glow**: Six breathing radial gradient orbs (purple, blue, gold, amber, violet, navy) spread across the full viewport create depth and life. Sized in `vw` units for responsive scaling. 80px blur for soft, sophisticated color washes. Water drop ripple rings in charcoal expand outward from each color region.
 - **Rotating highlights**: Key stats cycle with a slide-up/slide-out animation. Each has a single past-tense verb label (Published, Saved, Patented, Cut, Cleared, Shipped, Built, Deployed) above an uppercase gold stat line.
 - **Minimal**: No images, no icons, no borders, no cards. Just type, color, and light.
 - **Favicon**: Orbitron Q glyph path in orange on charcoal with ambient gradient background. SVG format.
