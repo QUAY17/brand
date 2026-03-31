@@ -20,7 +20,7 @@ credentials.*
 .claude/settings.local.json
 
 # Site plan (outdated)
-website/site-plan.md
+docs/site-plan.md
 
 # Old logo assets
-website/quay-logo.png
+docs/quay-logo.png
