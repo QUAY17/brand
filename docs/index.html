@@ -41,88 +41,88 @@
       position: relative;
     }
 
-    /* Ambient glow - saturated blues + gold, blurred for ripple effect */
+    /* Ambient glow - charcoal base, edge accents, pulsating waves */
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(80px);
+      filter: blur(120px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Cobalt blue - bottom left */
+    /* Muted purple - top left edge */
     .glow-1 {
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, #1E40AF 0%, transparent 70%);
-      bottom: -15%;
+      background: radial-gradient(circle, #2d1b69 0%, transparent 70%);
+      top: -15%;
       left: -12%;
-      animation: drift1 14s ease-in-out infinite;
+      animation: pulse1 10s ease-in-out infinite;
     }
 
-    /* Cerulean blue accent - right side */
+    /* Steel blue - top right edge */
     .glow-2 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, #2563EB 0%, transparent 70%);
-      top: 20%;
-      right: -12%;
-      animation: drift2 17s ease-in-out infinite;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #1E3A6E 0%, transparent 70%);
+      top: -10%;
+      right: -10%;
+      animation: pulse2 13s ease-in-out infinite;
     }
 
-    /* Gold accent - bottom center */
+    /* Gold - bottom center */
     .glow-3 {
       width: 450px;
       height: 450px;
-      background: radial-gradient(circle, #D4A020 0%, transparent 70%);
-      bottom: -20%;
-      left: 30%;
-      animation: drift3 20s ease-in-out infinite;
+      background: radial-gradient(circle, #C9A84C 0%, transparent 70%);
+      bottom: -15%;
+      left: 35%;
+      animation: pulse3 11s ease-in-out infinite;
     }
 
-    /* Deep navy - top left */
+    /* Deep charcoal-blue - bottom left */
     .glow-4 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #1E3A8A 0%, transparent 70%);
-      top: -10%;
-      left: -10%;
-      animation: drift4 16s ease-in-out infinite;
-    }
-
-    /* Slate blue - top right */
-    .glow-5 {
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, #1D4ED8 0%, transparent 70%);
-      top: -15%;
-      right: 10%;
-      animation: drift5 19s ease-in-out infinite;
+      background: radial-gradient(circle, #1a1f3a 0%, transparent 70%);
+      bottom: -12%;
+      left: -10%;
+      animation: pulse4 15s ease-in-out infinite;
     }
 
-    @keyframes drift1 {
-      0%, 100% { opacity: 0.5; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.7; transform: translate(25px, -20px) scale(1.06); }
+    /* Warm charcoal - right side mid */
+    .glow-5 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #2A2035 0%, transparent 70%);
+      top: 30%;
+      right: -8%;
+      animation: pulse5 12s ease-in-out infinite;
     }
 
-    @keyframes drift2 {
-      0%, 100% { opacity: 0.45; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.65; transform: translate(-20px, 15px) scale(1.08); }
+    @keyframes pulse1 {
+      0%, 100% { opacity: 0.4; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.7; transform: scale(1.15) translate(15px, 10px); }
     }
 
-    @keyframes drift3 {
-      0%, 100% { opacity: 0.35; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(15px, -15px) scale(1.05); }
+    @keyframes pulse2 {
+      0%, 100% { opacity: 0.35; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.65; transform: scale(1.2) translate(-10px, 15px); }
     }
 
-    @keyframes drift4 {
-      0%, 100% { opacity: 0.4; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(20px, 15px) scale(1.07); }
+    @keyframes pulse3 {
+      0%, 100% { opacity: 0.3; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.6; transform: scale(1.15) translate(10px, -10px); }
     }
 
-    @keyframes drift5 {
-      0%, 100% { opacity: 0.35; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(-15px, 20px) scale(1.05); }
+    @keyframes pulse4 {
+      0%, 100% { opacity: 0.3; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.55; transform: scale(1.12) translate(20px, -15px); }
+    }
+
+    @keyframes pulse5 {
+      0%, 100% { opacity: 0.25; transform: scale(1) translate(0, 0); }
+      50% { opacity: 0.5; transform: scale(1.18) translate(-12px, 12px); }
     }
 
     .container {
