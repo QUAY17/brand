@@ -44,7 +44,7 @@
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(90px);
       opacity: 0;
       pointer-events: none;
       z-index: 0;
@@ -52,35 +52,35 @@
     }
 
     .glow-1 {
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, #2d1b69 0%, transparent 70%);
-      bottom: -15%;
-      left: -5%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #5B2D9E 0%, #2d1b69 40%, transparent 70%);
+      bottom: -10%;
+      left: -8%;
       animation-delay: 0s;
     }
 
     .glow-2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, #2563EB 0%, transparent 70%);
-      bottom: -10%;
-      right: -5%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #3B82F6 0%, #1d4ed8 40%, transparent 70%);
+      bottom: -5%;
+      right: -8%;
       animation-delay: 3s;
     }
 
     .glow-3 {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, #C9A84C 0%, transparent 70%);
-      bottom: -5%;
-      left: 40%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #E5A530 0%, #C9A84C 40%, transparent 70%);
+      bottom: 0%;
+      left: 35%;
       animation-delay: 5s;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.35; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.15); }
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.75; transform: scale(1.15); }
     }
 
     .container {
@@ -226,28 +226,28 @@
       }
 
       .glow {
-        filter: blur(80px);
+        filter: blur(60px);
       }
 
       .glow-1 {
-        width: 300px;
-        height: 300px;
-        bottom: 5%;
-        left: -15%;
+        width: 350px;
+        height: 350px;
+        bottom: 10%;
+        left: -10%;
       }
 
       .glow-2 {
-        width: 250px;
-        height: 250px;
-        bottom: 10%;
-        right: -15%;
+        width: 300px;
+        height: 300px;
+        bottom: 15%;
+        right: -10%;
       }
 
       .glow-3 {
-        width: 200px;
-        height: 200px;
-        bottom: 15%;
-        left: 30%;
+        width: 250px;
+        height: 250px;
+        bottom: 20%;
+        left: 25%;
       }
     }
 
