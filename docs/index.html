@@ -41,11 +41,11 @@
       position: relative;
     }
 
-    /* Ambient glow - low blur, alternating bright/dark bands for visible rings */
+    /* Ambient glow - subtle breathing rings */
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(18px);
+      filter: blur(40px);
       pointer-events: none;
       z-index: 0;
     }
@@ -55,12 +55,10 @@
       width: 60vw;
       height: 60vw;
       background: radial-gradient(circle,
-        #5B2D9E 0%, #5B2D9E 8%,
-        #1A0E30 12%, #1A0E30 18%,
-        #4A2385 22%, #4A2385 28%,
-        #120A22 32%, #120A22 40%,
-        #3A1B65 44%, #3A1B65 50%,
-        #0A0515 54%, transparent 75%);
+        #3A1B65 0%, #3A1B65 8%,
+        #1A0E30 14%, #1A0E30 22%,
+        #2E1555 28%, #2E1555 35%,
+        #120A22 42%, transparent 70%);
       bottom: -15%;
       left: -10%;
       animation: drift1 35s ease-in-out infinite;
@@ -71,12 +69,10 @@
       width: 65vw;
       height: 65vw;
       background: radial-gradient(circle,
-        #2563EB 0%, #2563EB 8%,
-        #0C1E45 12%, #0C1E45 18%,
-        #1E50C0 22%, #1E50C0 28%,
-        #081530 32%, #081530 40%,
-        #153580 44%, #153580 50%,
-        #050E20 54%, transparent 75%);
+        #1E50C0 0%, #1E50C0 8%,
+        #0C1E45 14%, #0C1E45 22%,
+        #153580 28%, #153580 35%,
+        #081530 42%, transparent 70%);
       top: 5%;
       right: -12%;
       animation: drift2 42s ease-in-out infinite;
@@ -87,12 +83,10 @@
       width: 60vw;
       height: 60vw;
       background: radial-gradient(circle,
-        #C9A84C 0%, #C9A84C 8%,
-        #2A220E 12%, #2A220E 18%,
-        #8A7232 22%, #8A7232 28%,
-        #1A1508 32%, #1A1508 40%,
-        #705C28 44%, #705C28 50%,
-        #100D05 54%, transparent 75%);
+        #8A7232 0%, #8A7232 8%,
+        #2A220E 14%, #2A220E 22%,
+        #705C28 28%, #705C28 35%,
+        #1A1508 42%, transparent 70%);
       bottom: -15%;
       left: 30%;
       animation: drift3 45s ease-in-out infinite;
@@ -103,12 +97,10 @@
       width: 50vw;
       height: 50vw;
       background: radial-gradient(circle,
-        #E07020 0%, #E07020 8%,
-        #281406 12%, #281406 18%,
-        #A05018 22%, #A05018 28%,
-        #1A0E04 32%, #1A0E04 40%,
-        #7A3D12 44%, #7A3D12 50%,
-        #0F0802 54%, transparent 75%);
+        #A05018 0%, #A05018 8%,
+        #281406 14%, #281406 22%,
+        #7A3D12 28%, #7A3D12 35%,
+        #1A0E04 42%, transparent 70%);
       bottom: -10%;
       right: -5%;
       animation: drift4 38s ease-in-out infinite;
@@ -119,12 +111,10 @@
       width: 50vw;
       height: 50vw;
       background: radial-gradient(circle,
-        #5B2D9E 0%, #5B2D9E 8%,
-        #120A22 12%, #120A22 18%,
-        #3A1B65 22%, #3A1B65 28%,
-        #0A0515 32%, #0A0515 40%,
-        #2A1250 44%, #2A1250 50%,
-        #05030A 54%, transparent 75%);
+        #3A1B65 0%, #3A1B65 8%,
+        #120A22 14%, #120A22 22%,
+        #2A1250 28%, #2A1250 35%,
+        #0A0515 42%, transparent 70%);
       top: -12%;
       left: -5%;
       animation: drift5 40s ease-in-out infinite;
@@ -135,45 +125,43 @@
       width: 55vw;
       height: 55vw;
       background: radial-gradient(circle,
-        #2563EB 0%, #2563EB 8%,
-        #0A1830 12%, #0A1830 18%,
-        #1A4A9E 22%, #1A4A9E 28%,
-        #061220 32%, #061220 40%,
-        #102D60 44%, #102D60 50%,
-        #040A15 54%, transparent 75%);
+        #1A4A9E 0%, #1A4A9E 8%,
+        #0A1830 14%, #0A1830 22%,
+        #102D60 28%, #102D60 35%,
+        #061220 42%, transparent 70%);
       top: -15%;
       right: 5%;
       animation: drift6 43s ease-in-out infinite;
     }
 
     @keyframes drift1 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.85; transform: translate(30px, -20px) scale(1.12); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(30px, -20px) scale(1.1); }
     }
 
     @keyframes drift2 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.9; transform: translate(-25px, 20px) scale(1.15); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.65; transform: translate(-25px, 20px) scale(1.12); }
     }
 
     @keyframes drift3 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.85; transform: translate(20px, -15px) scale(1.12); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(20px, -15px) scale(1.1); }
     }
 
     @keyframes drift4 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.8; transform: translate(-20px, -15px) scale(1.1); }
+      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(-20px, -15px) scale(1.08); }
     }
 
     @keyframes drift5 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.75; transform: translate(25px, 18px) scale(1.1); }
+      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(25px, 18px) scale(1.08); }
     }
 
     @keyframes drift6 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.75; transform: translate(-18px, 22px) scale(1.1); }
+      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(-18px, 22px) scale(1.08); }
     }
 
     .container {
