@@ -41,7 +41,19 @@
       position: relative;
     }
 
-    /* Ambient glow - layered orbs for visible breathing depth */
+    /* Fade in on load */
+    .glow, .ripple-ring {
+      animation-fill-mode: both;
+    }
+    body {
+      animation: fadeInPage 3s ease-out forwards;
+    }
+    @keyframes fadeInPage {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    /* Color wash orbs - breathing */
     .glow {
       position: fixed;
       border-radius: 50%;
@@ -49,9 +61,6 @@
       z-index: 0;
     }
 
-    /* Each color gets an outer wash + inner core, staggered timing = ripple */
-
-    /* Purple outer */
     .glow-1 {
       width: 55vw;
       height: 55vw;
@@ -61,18 +70,7 @@
       left: -5%;
       animation: breathe1 24s ease-in-out infinite;
     }
-    /* Purple inner */
-    .glow-1b {
-      width: 30vw;
-      height: 30vw;
-      background: radial-gradient(circle, #5B2D9E 0%, #3A1B65 40%, transparent 70%);
-      filter: blur(50px);
-      bottom: 0%;
-      left: 5%;
-      animation: breathe1 24s ease-in-out 3s infinite;
-    }
 
-    /* Blue outer */
     .glow-2 {
       width: 60vw;
       height: 60vw;
@@ -82,18 +80,7 @@
       right: -8%;
       animation: breathe2 28s ease-in-out infinite;
     }
-    /* Blue inner */
-    .glow-2b {
-      width: 32vw;
-      height: 32vw;
-      background: radial-gradient(circle, #2563EB 0%, #153580 40%, transparent 70%);
-      filter: blur(50px);
-      top: 15%;
-      right: 2%;
-      animation: breathe2 28s ease-in-out 3.5s infinite;
-    }
 
-    /* Gold outer */
     .glow-3 {
       width: 55vw;
       height: 55vw;
@@ -103,18 +90,7 @@
       left: 25%;
       animation: breathe3 30s ease-in-out infinite;
     }
-    /* Gold inner */
-    .glow-3b {
-      width: 28vw;
-      height: 28vw;
-      background: radial-gradient(circle, #C9A84C 0%, #8A7232 40%, transparent 70%);
-      filter: blur(50px);
-      bottom: -2%;
-      left: 35%;
-      animation: breathe3 30s ease-in-out 4s infinite;
-    }
 
-    /* Amber outer */
     .glow-4 {
       width: 45vw;
       height: 45vw;
@@ -124,18 +100,7 @@
       right: 0%;
       animation: breathe4 26s ease-in-out infinite;
     }
-    /* Amber inner */
-    .glow-4b {
-      width: 24vw;
-      height: 24vw;
-      background: radial-gradient(circle, #A05018 0%, #7A3D12 40%, transparent 70%);
-      filter: blur(50px);
-      bottom: 2%;
-      right: 8%;
-      animation: breathe4 26s ease-in-out 3s infinite;
-    }
 
-    /* Violet - top left */
     .glow-5 {
       width: 45vw;
       height: 45vw;
@@ -146,7 +111,6 @@
       animation: breathe5 25s ease-in-out infinite;
     }
 
-    /* Blue - top right */
     .glow-6 {
       width: 50vw;
       height: 50vw;
@@ -161,30 +125,89 @@
       0%, 100% { opacity: 0.2; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.2); }
     }
-
     @keyframes breathe2 {
       0%, 100% { opacity: 0.2; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.2); }
     }
-
     @keyframes breathe3 {
       0%, 100% { opacity: 0.2; transform: scale(1); }
       50% { opacity: 0.6; transform: scale(1.2); }
     }
-
     @keyframes breathe4 {
       0%, 100% { opacity: 0.15; transform: scale(1); }
       50% { opacity: 0.55; transform: scale(1.2); }
     }
-
     @keyframes breathe5 {
       0%, 100% { opacity: 0.15; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(1.15); }
     }
-
     @keyframes breathe6 {
       0%, 100% { opacity: 0.15; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(1.15); }
+    }
+
+    /* Expanding ripple rings - radiate outward from each orb center */
+    .ripple-origin {
+      position: fixed;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .ripple-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      filter: blur(8px);
+    }
+
+    /* Purple ripples - bottom left */
+    .ripple-origin-1 { bottom: 8%; left: 12%; }
+    .ripple-origin-1 .ripple-ring {
+      border-color: #5B2D9E;
+      animation: rippleExpand 20s ease-out infinite;
+    }
+    .ripple-origin-1 .ring-1 { width: 20vw; height: 20vw; animation-delay: 0s; }
+    .ripple-origin-1 .ring-2 { width: 30vw; height: 30vw; animation-delay: 5s; }
+    .ripple-origin-1 .ring-3 { width: 40vw; height: 40vw; animation-delay: 10s; }
+
+    /* Blue ripples - right */
+    .ripple-origin-2 { top: 25%; right: 10%; }
+    .ripple-origin-2 .ripple-ring {
+      border-color: #2563EB;
+      animation: rippleExpand 24s ease-out infinite;
+    }
+    .ripple-origin-2 .ring-1 { width: 22vw; height: 22vw; animation-delay: 0s; }
+    .ripple-origin-2 .ring-2 { width: 32vw; height: 32vw; animation-delay: 6s; }
+    .ripple-origin-2 .ring-3 { width: 42vw; height: 42vw; animation-delay: 12s; }
+
+    /* Gold ripples - bottom center */
+    .ripple-origin-3 { bottom: 5%; left: 45%; }
+    .ripple-origin-3 .ripple-ring {
+      border-color: #C9A84C;
+      animation: rippleExpand 22s ease-out infinite;
+    }
+    .ripple-origin-3 .ring-1 { width: 18vw; height: 18vw; animation-delay: 0s; }
+    .ripple-origin-3 .ring-2 { width: 28vw; height: 28vw; animation-delay: 5.5s; }
+    .ripple-origin-3 .ring-3 { width: 38vw; height: 38vw; animation-delay: 11s; }
+
+    /* Orange ripples - bottom right */
+    .ripple-origin-4 { bottom: 10%; right: 15%; }
+    .ripple-origin-4 .ripple-ring {
+      border-color: #E07020;
+      animation: rippleExpand 21s ease-out infinite;
+    }
+    .ripple-origin-4 .ring-1 { width: 16vw; height: 16vw; animation-delay: 0s; }
+    .ripple-origin-4 .ring-2 { width: 26vw; height: 26vw; animation-delay: 5s; }
+    .ripple-origin-4 .ring-3 { width: 36vw; height: 36vw; animation-delay: 10s; }
+
+    @keyframes rippleExpand {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      10% { opacity: 0.4; }
+      80% { opacity: 0.08; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
     }
 
     .container {
@@ -395,15 +418,32 @@
 <body>
 
   <div class="glow glow-1"></div>
-  <div class="glow glow-1b"></div>
   <div class="glow glow-2"></div>
-  <div class="glow glow-2b"></div>
   <div class="glow glow-3"></div>
-  <div class="glow glow-3b"></div>
   <div class="glow glow-4"></div>
-  <div class="glow glow-4b"></div>
   <div class="glow glow-5"></div>
   <div class="glow glow-6"></div>
+
+  <div class="ripple-origin ripple-origin-1">
+    <div class="ripple-ring ring-1"></div>
+    <div class="ripple-ring ring-2"></div>
+    <div class="ripple-ring ring-3"></div>
+  </div>
+  <div class="ripple-origin ripple-origin-2">
+    <div class="ripple-ring ring-1"></div>
+    <div class="ripple-ring ring-2"></div>
+    <div class="ripple-ring ring-3"></div>
+  </div>
+  <div class="ripple-origin ripple-origin-3">
+    <div class="ripple-ring ring-1"></div>
+    <div class="ripple-ring ring-2"></div>
+    <div class="ripple-ring ring-3"></div>
+  </div>
+  <div class="ripple-origin ripple-origin-4">
+    <div class="ripple-ring ring-1"></div>
+    <div class="ripple-ring ring-2"></div>
+    <div class="ripple-ring ring-3"></div>
+  </div>
 
   <main class="container">
 
