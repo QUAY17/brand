@@ -19,7 +19,7 @@
     :root {
       --orange: #E07020;
       --gold: #e4bd54;
-      --charcoal: #2F3136;
+      --charcoal: #2C2A30;
       --gray: #B0B5BC;
       --gray-dim: #7A8290;
       --white: #E4E6E9;
@@ -41,127 +41,103 @@
       position: relative;
     }
 
-    /* Ambient glow - subtle breathing rings */
+    /* Ambient glow - smooth color washes, soft breathing */
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(40px);
+      filter: blur(90px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Purple - bottom left */
+    /* Soft purple - bottom left */
     .glow-1 {
-      width: 60vw;
-      height: 60vw;
-      background: radial-gradient(circle,
-        #3A1B65 0%, #3A1B65 8%,
-        #1A0E30 14%, #1A0E30 22%,
-        #2E1555 28%, #2E1555 35%,
-        #120A22 42%, transparent 70%);
-      bottom: -15%;
-      left: -10%;
+      width: 55vw;
+      height: 55vw;
+      background: radial-gradient(circle, #4A2385 0%, #2E1555 40%, transparent 70%);
+      bottom: -10%;
+      left: -5%;
       animation: drift1 35s ease-in-out infinite;
     }
 
-    /* Blue - right side */
+    /* Steel blue - right side */
     .glow-2 {
-      width: 65vw;
-      height: 65vw;
-      background: radial-gradient(circle,
-        #1E50C0 0%, #1E50C0 8%,
-        #0C1E45 14%, #0C1E45 22%,
-        #153580 28%, #153580 35%,
-        #081530 42%, transparent 70%);
-      top: 5%;
-      right: -12%;
+      width: 60vw;
+      height: 60vw;
+      background: radial-gradient(circle, #1E50C0 0%, #0F2860 40%, transparent 70%);
+      top: 10%;
+      right: -8%;
       animation: drift2 42s ease-in-out infinite;
     }
 
-    /* Gold - bottom center */
+    /* Warm gold - bottom center */
     .glow-3 {
-      width: 60vw;
-      height: 60vw;
-      background: radial-gradient(circle,
-        #8A7232 0%, #8A7232 8%,
-        #2A220E 14%, #2A220E 22%,
-        #705C28 28%, #705C28 35%,
-        #1A1508 42%, transparent 70%);
-      bottom: -15%;
-      left: 30%;
+      width: 55vw;
+      height: 55vw;
+      background: radial-gradient(circle, #B09340 0%, #584920 40%, transparent 70%);
+      bottom: -12%;
+      left: 25%;
       animation: drift3 45s ease-in-out infinite;
     }
 
-    /* Orange - bottom right */
+    /* Warm amber - bottom right */
     .glow-4 {
-      width: 50vw;
-      height: 50vw;
-      background: radial-gradient(circle,
-        #A05018 0%, #A05018 8%,
-        #281406 14%, #281406 22%,
-        #7A3D12 28%, #7A3D12 35%,
-        #1A0E04 42%, transparent 70%);
-      bottom: -10%;
-      right: -5%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, #A05018 0%, #5C2E0E 40%, transparent 70%);
+      bottom: -8%;
+      right: 0%;
       animation: drift4 38s ease-in-out infinite;
     }
 
-    /* Deep purple - top left */
+    /* Soft violet - top left */
     .glow-5 {
-      width: 50vw;
-      height: 50vw;
-      background: radial-gradient(circle,
-        #3A1B65 0%, #3A1B65 8%,
-        #120A22 14%, #120A22 22%,
-        #2A1250 28%, #2A1250 35%,
-        #0A0515 42%, transparent 70%);
-      top: -12%;
-      left: -5%;
+      width: 45vw;
+      height: 45vw;
+      background: radial-gradient(circle, #3A1B65 0%, #1E0E35 40%, transparent 70%);
+      top: -8%;
+      left: 0%;
       animation: drift5 40s ease-in-out infinite;
     }
 
-    /* Steel blue - top right */
+    /* Muted blue - top right */
     .glow-6 {
-      width: 55vw;
-      height: 55vw;
-      background: radial-gradient(circle,
-        #1A4A9E 0%, #1A4A9E 8%,
-        #0A1830 14%, #0A1830 22%,
-        #102D60 28%, #102D60 35%,
-        #061220 42%, transparent 70%);
-      top: -15%;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, #1A4A9E 0%, #0C2550 40%, transparent 70%);
+      top: -10%;
       right: 5%;
       animation: drift6 43s ease-in-out infinite;
     }
 
     @keyframes drift1 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(30px, -20px) scale(1.1); }
+      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(25px, -15px) scale(1.08); }
     }
 
     @keyframes drift2 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.65; transform: translate(-25px, 20px) scale(1.12); }
+      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(-20px, 18px) scale(1.1); }
     }
 
     @keyframes drift3 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(20px, -15px) scale(1.1); }
+      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(15px, -12px) scale(1.08); }
     }
 
     @keyframes drift4 {
-      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(-20px, -15px) scale(1.08); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(-15px, -12px) scale(1.06); }
     }
 
     @keyframes drift5 {
-      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(25px, 18px) scale(1.08); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.5; transform: translate(20px, 15px) scale(1.06); }
     }
 
     @keyframes drift6 {
-      0%, 100% { opacity: 0.2; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(-18px, 22px) scale(1.08); }
+      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.5; transform: translate(-15px, 18px) scale(1.06); }
     }
 
     .container {
