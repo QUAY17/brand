@@ -41,103 +41,150 @@
       position: relative;
     }
 
-    /* Ambient glow - smooth color washes, soft breathing */
+    /* Ambient glow - layered orbs for visible breathing depth */
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(90px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Soft purple - bottom left */
+    /* Each color gets an outer wash + inner core, staggered timing = ripple */
+
+    /* Purple outer */
     .glow-1 {
       width: 55vw;
       height: 55vw;
-      background: radial-gradient(circle, #4A2385 0%, #2E1555 40%, transparent 70%);
+      background: radial-gradient(circle, #4A2385 0%, #2E1555 35%, transparent 65%);
+      filter: blur(80px);
       bottom: -10%;
       left: -5%;
-      animation: drift1 35s ease-in-out infinite;
+      animation: breathe1 24s ease-in-out infinite;
+    }
+    /* Purple inner */
+    .glow-1b {
+      width: 30vw;
+      height: 30vw;
+      background: radial-gradient(circle, #5B2D9E 0%, #3A1B65 40%, transparent 70%);
+      filter: blur(50px);
+      bottom: 0%;
+      left: 5%;
+      animation: breathe1 24s ease-in-out 3s infinite;
     }
 
-    /* Steel blue - right side */
+    /* Blue outer */
     .glow-2 {
       width: 60vw;
       height: 60vw;
-      background: radial-gradient(circle, #1E50C0 0%, #0F2860 40%, transparent 70%);
-      top: 10%;
+      background: radial-gradient(circle, #1E50C0 0%, #0F2860 35%, transparent 65%);
+      filter: blur(80px);
+      top: 5%;
       right: -8%;
-      animation: drift2 42s ease-in-out infinite;
+      animation: breathe2 28s ease-in-out infinite;
+    }
+    /* Blue inner */
+    .glow-2b {
+      width: 32vw;
+      height: 32vw;
+      background: radial-gradient(circle, #2563EB 0%, #153580 40%, transparent 70%);
+      filter: blur(50px);
+      top: 15%;
+      right: 2%;
+      animation: breathe2 28s ease-in-out 3.5s infinite;
     }
 
-    /* Warm gold - bottom center */
+    /* Gold outer */
     .glow-3 {
       width: 55vw;
       height: 55vw;
-      background: radial-gradient(circle, #B09340 0%, #584920 40%, transparent 70%);
+      background: radial-gradient(circle, #8A7232 0%, #584920 35%, transparent 65%);
+      filter: blur(80px);
       bottom: -12%;
       left: 25%;
-      animation: drift3 45s ease-in-out infinite;
+      animation: breathe3 30s ease-in-out infinite;
+    }
+    /* Gold inner */
+    .glow-3b {
+      width: 28vw;
+      height: 28vw;
+      background: radial-gradient(circle, #C9A84C 0%, #8A7232 40%, transparent 70%);
+      filter: blur(50px);
+      bottom: -2%;
+      left: 35%;
+      animation: breathe3 30s ease-in-out 4s infinite;
     }
 
-    /* Warm amber - bottom right */
+    /* Amber outer */
     .glow-4 {
       width: 45vw;
       height: 45vw;
-      background: radial-gradient(circle, #A05018 0%, #5C2E0E 40%, transparent 70%);
+      background: radial-gradient(circle, #7A3D12 0%, #45220A 35%, transparent 65%);
+      filter: blur(80px);
       bottom: -8%;
       right: 0%;
-      animation: drift4 38s ease-in-out infinite;
+      animation: breathe4 26s ease-in-out infinite;
+    }
+    /* Amber inner */
+    .glow-4b {
+      width: 24vw;
+      height: 24vw;
+      background: radial-gradient(circle, #A05018 0%, #7A3D12 40%, transparent 70%);
+      filter: blur(50px);
+      bottom: 2%;
+      right: 8%;
+      animation: breathe4 26s ease-in-out 3s infinite;
     }
 
-    /* Soft violet - top left */
+    /* Violet - top left */
     .glow-5 {
       width: 45vw;
       height: 45vw;
-      background: radial-gradient(circle, #3A1B65 0%, #1E0E35 40%, transparent 70%);
+      background: radial-gradient(circle, #3A1B65 0%, #1E0E35 35%, transparent 65%);
+      filter: blur(80px);
       top: -8%;
       left: 0%;
-      animation: drift5 40s ease-in-out infinite;
+      animation: breathe5 25s ease-in-out infinite;
     }
 
-    /* Muted blue - top right */
+    /* Blue - top right */
     .glow-6 {
       width: 50vw;
       height: 50vw;
-      background: radial-gradient(circle, #1A4A9E 0%, #0C2550 40%, transparent 70%);
+      background: radial-gradient(circle, #1A4A9E 0%, #0C2550 35%, transparent 65%);
+      filter: blur(80px);
       top: -10%;
       right: 5%;
-      animation: drift6 43s ease-in-out infinite;
+      animation: breathe6 27s ease-in-out infinite;
     }
 
-    @keyframes drift1 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(25px, -15px) scale(1.08); }
+    @keyframes breathe1 {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
     }
 
-    @keyframes drift2 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(-20px, 18px) scale(1.1); }
+    @keyframes breathe2 {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
     }
 
-    @keyframes drift3 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(15px, -12px) scale(1.08); }
+    @keyframes breathe3 {
+      0%, 100% { opacity: 0.2; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
     }
 
-    @keyframes drift4 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.55; transform: translate(-15px, -12px) scale(1.06); }
+    @keyframes breathe4 {
+      0%, 100% { opacity: 0.15; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.2); }
     }
 
-    @keyframes drift5 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.5; transform: translate(20px, 15px) scale(1.06); }
+    @keyframes breathe5 {
+      0%, 100% { opacity: 0.15; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.15); }
     }
 
-    @keyframes drift6 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.5; transform: translate(-15px, 18px) scale(1.06); }
+    @keyframes breathe6 {
+      0%, 100% { opacity: 0.15; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.15); }
     }
 
     .container {
@@ -348,9 +395,13 @@
 <body>
 
   <div class="glow glow-1"></div>
+  <div class="glow glow-1b"></div>
   <div class="glow glow-2"></div>
+  <div class="glow glow-2b"></div>
   <div class="glow glow-3"></div>
+  <div class="glow glow-3b"></div>
   <div class="glow glow-4"></div>
+  <div class="glow glow-4b"></div>
   <div class="glow glow-5"></div>
   <div class="glow glow-6"></div>
 
