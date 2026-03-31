@@ -41,30 +41,30 @@
       position: relative;
     }
 
-    /* Ambient glow - muted navy base, saturated accents, high blur for ripple effect */
+    /* Ambient glow - saturated blues + gold, blurred for ripple effect */
     .glow {
       position: fixed;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(80px);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Dark slate blue - bottom left */
+    /* Cobalt blue - bottom left */
     .glow-1 {
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, #1B2A4A 0%, transparent 70%);
+      background: radial-gradient(circle, #1E40AF 0%, transparent 70%);
       bottom: -15%;
       left: -12%;
       animation: drift1 14s ease-in-out infinite;
     }
 
-    /* Steel blue accent - right side */
+    /* Cerulean blue accent - right side */
     .glow-2 {
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, #2B5EA7 0%, transparent 70%);
+      background: radial-gradient(circle, #2563EB 0%, transparent 70%);
       top: 20%;
       right: -12%;
       animation: drift2 17s ease-in-out infinite;
@@ -74,55 +74,55 @@
     .glow-3 {
       width: 450px;
       height: 450px;
-      background: radial-gradient(circle, #C49520 0%, transparent 70%);
+      background: radial-gradient(circle, #D4A020 0%, transparent 70%);
       bottom: -20%;
       left: 30%;
       animation: drift3 20s ease-in-out infinite;
     }
 
-    /* Deep indigo - top left */
+    /* Deep navy - top left */
     .glow-4 {
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, #1E2D5C 0%, transparent 70%);
+      background: radial-gradient(circle, #1E3A8A 0%, transparent 70%);
       top: -10%;
       left: -10%;
       animation: drift4 16s ease-in-out infinite;
     }
 
-    /* Midnight blue - top right */
+    /* Slate blue - top right */
     .glow-5 {
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, #1A3558 0%, transparent 70%);
+      background: radial-gradient(circle, #1D4ED8 0%, transparent 70%);
       top: -15%;
       right: 10%;
       animation: drift5 19s ease-in-out infinite;
     }
 
     @keyframes drift1 {
-      0%, 100% { opacity: 0.45; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.6; transform: translate(25px, -20px) scale(1.06); }
+      0%, 100% { opacity: 0.5; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.7; transform: translate(25px, -20px) scale(1.06); }
     }
 
     @keyframes drift2 {
-      0%, 100% { opacity: 0.35; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.5; transform: translate(-20px, 15px) scale(1.08); }
+      0%, 100% { opacity: 0.45; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.65; transform: translate(-20px, 15px) scale(1.08); }
     }
 
     @keyframes drift3 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.4; transform: translate(15px, -15px) scale(1.05); }
+      0%, 100% { opacity: 0.35; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(15px, -15px) scale(1.05); }
     }
 
     @keyframes drift4 {
-      0%, 100% { opacity: 0.3; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.45; transform: translate(20px, 15px) scale(1.07); }
+      0%, 100% { opacity: 0.4; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.6; transform: translate(20px, 15px) scale(1.07); }
     }
 
     @keyframes drift5 {
-      0%, 100% { opacity: 0.25; transform: translate(0, 0) scale(1); }
-      50% { opacity: 0.4; transform: translate(-15px, 20px) scale(1.05); }
+      0%, 100% { opacity: 0.35; transform: translate(0, 0) scale(1); }
+      50% { opacity: 0.55; transform: translate(-15px, 20px) scale(1.05); }
     }
 
     .container {
