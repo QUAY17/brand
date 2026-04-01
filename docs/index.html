@@ -41,109 +41,137 @@
       position: relative;
     }
 
-    /* Fade in on load */
+    /* Fade in on load -- slow emergence */
     .glow, .drop-ring {
       animation-fill-mode: both;
     }
     body {
-      animation: fadeInPage 3s ease-out forwards;
+      animation: fadeInPage 8s ease-out forwards;
     }
     @keyframes fadeInPage {
-      0% { opacity: 0.3; }
+      0% { opacity: 0; }
       100% { opacity: 1; }
     }
 
-    /* Color wash orbs - breathing */
+    /* Color wash orbs -- fade in to full saturation, then breathe */
     .glow {
       position: fixed;
       border-radius: 50%;
       pointer-events: none;
       z-index: 0;
+      opacity: 0;
     }
 
+    /* Bottom-left: purple */
     .glow-1 {
-      width: 55vw;
-      height: 55vw;
-      background: radial-gradient(circle, #4A2385 0%, #2E1555 35%, transparent 65%);
-      filter: blur(80px);
-      bottom: -10%;
-      left: -5%;
-      animation: breathe1 24s ease-in-out infinite;
-    }
-
-    .glow-2 {
-      width: 60vw;
-      height: 60vw;
-      background: radial-gradient(circle, #1E50C0 0%, #0F2860 35%, transparent 65%);
-      filter: blur(80px);
-      top: 5%;
-      right: -8%;
-      animation: breathe2 28s ease-in-out infinite;
-    }
-
-    .glow-3 {
-      width: 55vw;
-      height: 55vw;
-      background: radial-gradient(circle, #8A7232 0%, #584920 35%, transparent 65%);
-      filter: blur(80px);
-      bottom: -12%;
-      left: 25%;
-      animation: breathe3 30s ease-in-out infinite;
-    }
-
-    .glow-4 {
       width: 45vw;
       height: 45vw;
-      background: radial-gradient(circle, #7A3D12 0%, #45220A 35%, transparent 65%);
-      filter: blur(80px);
+      background: radial-gradient(circle, #5B2D9E 0%, #2E1555 35%, transparent 65%);
+      filter: blur(60px);
       bottom: -8%;
-      right: 0%;
-      animation: breathe4 26s ease-in-out infinite;
+      left: -5%;
+      animation: arrive1 10s ease-out 1s forwards, breathe1 36s ease-in-out 11s infinite;
     }
 
+    /* Right-center: blue */
+    .glow-2 {
+      width: 42vw;
+      height: 42vw;
+      background: radial-gradient(circle, #2563EB 0%, #0F2860 35%, transparent 65%);
+      filter: blur(60px);
+      top: 22%;
+      right: -5%;
+      animation: arrive2 10s ease-out 3s forwards, breathe2 42s ease-in-out 13s infinite;
+    }
+
+    /* Bottom-center: gold */
+    .glow-3 {
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(circle, #C9A84C 0%, #7A6420 35%, transparent 65%);
+      filter: blur(60px);
+      bottom: -5%;
+      left: 38%;
+      animation: arrive3 10s ease-out 5s forwards, breathe3 45s ease-in-out 15s infinite;
+    }
+
+    /* Left-center: warm amber */
+    .glow-4 {
+      width: 38vw;
+      height: 38vw;
+      background: radial-gradient(circle, #B86420 0%, #6E3A10 35%, transparent 65%);
+      filter: blur(60px);
+      top: 30%;
+      left: -8%;
+      animation: arrive4 10s ease-out 4s forwards, breathe4 40s ease-in-out 14s infinite;
+    }
+
+    /* Top-left: purple accent */
     .glow-5 {
-      width: 45vw;
-      height: 45vw;
-      background: radial-gradient(circle, #3A1B65 0%, #1E0E35 35%, transparent 65%);
-      filter: blur(80px);
-      top: -8%;
-      left: 0%;
-      animation: breathe5 25s ease-in-out infinite;
+      width: 35vw;
+      height: 35vw;
+      background: radial-gradient(circle, #9333EA 0%, #3A1B65 35%, transparent 65%);
+      filter: blur(60px);
+      top: -5%;
+      left: 5%;
+      animation: arrive5 10s ease-out 2s forwards, breathe5 38s ease-in-out 12s infinite;
     }
 
+    /* Top-right: deep blue accent */
     .glow-6 {
-      width: 50vw;
-      height: 50vw;
-      background: radial-gradient(circle, #1A4A9E 0%, #0C2550 35%, transparent 65%);
-      filter: blur(80px);
-      top: -10%;
+      width: 38vw;
+      height: 38vw;
+      background: radial-gradient(circle, #1E3A6E 0%, #0C2550 35%, transparent 65%);
+      filter: blur(60px);
+      top: -5%;
       right: 5%;
-      animation: breathe6 27s ease-in-out infinite;
+      animation: arrive6 10s ease-out 6s forwards, breathe6 44s ease-in-out 16s infinite;
     }
 
+    /* Phase 1: slow fade in to peak saturation -- each orb arrives staggered */
+    @keyframes arrive1 { 0% { opacity: 0; } 100% { opacity: 0.45; } }
+    @keyframes arrive2 { 0% { opacity: 0; } 100% { opacity: 0.4; } }
+    @keyframes arrive3 { 0% { opacity: 0; } 100% { opacity: 0.35; } }
+    @keyframes arrive4 { 0% { opacity: 0; } 100% { opacity: 0.35; } }
+    @keyframes arrive5 { 0% { opacity: 0; } 100% { opacity: 0.3; } }
+    @keyframes arrive6 { 0% { opacity: 0; } 100% { opacity: 0.25; } }
+
+    /* Phase 2: breathing -- deep exhales down to near-nothing,
+       full inhales back to peak. Visible lung-like range. */
     @keyframes breathe1 {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.2); }
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      30% { opacity: 0.08; transform: scale(0.95); }
+      55% { opacity: 0.42; transform: scale(1.03); }
+      80% { opacity: 0.1; transform: scale(0.96); }
     }
     @keyframes breathe2 {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.2); }
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      25% { opacity: 0.06; transform: scale(0.95); }
+      50% { opacity: 0.38; transform: scale(1.03); }
+      75% { opacity: 0.08; transform: scale(0.96); }
     }
     @keyframes breathe3 {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.2); }
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      35% { opacity: 0.06; transform: scale(0.95); }
+      60% { opacity: 0.32; transform: scale(1.03); }
+      85% { opacity: 0.08; transform: scale(0.96); }
     }
     @keyframes breathe4 {
-      0%, 100% { opacity: 0.15; transform: scale(1); }
-      50% { opacity: 0.55; transform: scale(1.2); }
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      20% { opacity: 0.05; transform: scale(0.96); }
+      45% { opacity: 0.32; transform: scale(1.02); }
+      70% { opacity: 0.07; transform: scale(0.95); }
     }
     @keyframes breathe5 {
-      0%, 100% { opacity: 0.15; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.15); }
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      30% { opacity: 0.05; transform: scale(0.95); }
+      55% { opacity: 0.28; transform: scale(1.03); }
+      80% { opacity: 0.06; transform: scale(0.96); }
     }
     @keyframes breathe6 {
-      0%, 100% { opacity: 0.15; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.15); }
+      0%, 100% { opacity: 0.25; transform: scale(1); }
+      35% { opacity: 0.04; transform: scale(0.96); }
+      65% { opacity: 0.22; transform: scale(1.02); }
     }
 
     /* Single water drop - one ring expands very slowly per region */
@@ -344,46 +372,48 @@
         gap: 1rem;
       }
 
+      .glow { filter: blur(45px) !important; }
+
       .glow-1 {
-        width: 60vw;
-        height: 60vw;
-        bottom: -5%;
-        left: -15%;
+        width: 65vw;
+        height: 65vw;
+        bottom: -8%;
+        left: -10%;
       }
 
       .glow-2 {
-        width: 55vw;
-        height: 55vw;
-        top: 10%;
-        right: -15%;
+        width: 60vw;
+        height: 60vw;
+        top: 15%;
+        right: -12%;
       }
 
       .glow-3 {
-        width: 50vw;
-        height: 50vw;
-        bottom: -10%;
+        width: 55vw;
+        height: 55vw;
+        bottom: -8%;
         left: 25%;
       }
 
       .glow-4 {
-        width: 50vw;
-        height: 50vw;
-        bottom: -8%;
-        right: -10%;
+        width: 55vw;
+        height: 55vw;
+        top: 25%;
+        left: -12%;
       }
 
       .glow-5 {
         width: 50vw;
         height: 50vw;
-        top: -10%;
-        left: -10%;
+        top: -8%;
+        left: -5%;
       }
 
       .glow-6 {
         width: 55vw;
         height: 55vw;
-        top: -12%;
-        right: 5%;
+        top: -8%;
+        right: 0%;
       }
 
     }
