@@ -146,7 +146,7 @@
       50% { opacity: 0.5; transform: scale(1.15); }
     }
 
-    /* Water drop ripples - charcoal rings expand slowly from each color region */
+    /* Water drop ripples - slow breathing expansion from spread-out origins */
     .ripple-origin {
       position: fixed;
       pointer-events: none;
@@ -155,56 +155,38 @@
 
     .ripple-ring {
       position: absolute;
-      width: 40vw;
-      height: 40vw;
       border-radius: 50%;
-      border: 1.5px solid rgba(44, 42, 48, 0.6);
+      border: 1px solid rgba(44, 42, 48, 0.5);
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      filter: blur(4px);
+      transform: translate(-50%, -50%) scale(0.2);
+      filter: blur(5px);
       opacity: 0;
     }
 
-    /* Purple region - bottom left (matches glow-1) */
-    .ripple-origin-1 { bottom: 12%; left: 18%; }
-    .ripple-origin-1 .ripple-ring { animation: rippleDrop 24s ease-out infinite; }
+    /* Bottom left */
+    .ripple-origin-1 { bottom: 15%; left: 10%; }
+    .ripple-origin-1 .ripple-ring { width: 35vw; height: 35vw; animation: rippleBreathe 40s ease-in-out infinite; }
     .ripple-origin-1 .ring-1 { animation-delay: 0s; }
-    .ripple-origin-1 .ring-2 { animation-delay: 8s; }
-    .ripple-origin-1 .ring-3 { animation-delay: 16s; }
+    .ripple-origin-1 .ring-2 { animation-delay: 13s; }
 
-    /* Blue region - upper right (matches glow-2) */
-    .ripple-origin-2 { top: 25%; right: 12%; }
-    .ripple-origin-2 .ripple-ring { width: 45vw; height: 45vw; animation: rippleDrop 28s ease-out infinite; }
-    .ripple-origin-2 .ring-1 { animation-delay: 4s; }
-    .ripple-origin-2 .ring-2 { animation-delay: 13s; }
-    .ripple-origin-2 .ring-3 { animation-delay: 22s; }
+    /* Top right */
+    .ripple-origin-2 { top: 15%; right: 10%; }
+    .ripple-origin-2 .ripple-ring { width: 38vw; height: 38vw; animation: rippleBreathe 45s ease-in-out infinite; }
+    .ripple-origin-2 .ring-1 { animation-delay: 8s; }
+    .ripple-origin-2 .ring-2 { animation-delay: 23s; }
 
-    /* Gold region - bottom center (matches glow-3) */
-    .ripple-origin-3 { bottom: 8%; left: 48%; }
-    .ripple-origin-3 .ripple-ring { width: 38vw; height: 38vw; animation: rippleDrop 30s ease-out infinite; }
-    .ripple-origin-3 .ring-1 { animation-delay: 7s; }
-    .ripple-origin-3 .ring-2 { animation-delay: 17s; }
-    .ripple-origin-3 .ring-3 { animation-delay: 25s; }
+    /* Center bottom */
+    .ripple-origin-3 { bottom: 10%; left: 45%; }
+    .ripple-origin-3 .ripple-ring { width: 30vw; height: 30vw; animation: rippleBreathe 42s ease-in-out infinite; }
+    .ripple-origin-3 .ring-1 { animation-delay: 5s; }
+    .ripple-origin-3 .ring-2 { animation-delay: 20s; }
 
-    /* Violet region - top left (matches glow-5) */
-    .ripple-origin-4 { top: 12%; left: 18%; }
-    .ripple-origin-4 .ripple-ring { width: 35vw; height: 35vw; animation: rippleDrop 25s ease-out infinite; }
-    .ripple-origin-4 .ring-1 { animation-delay: 2s; }
-    .ripple-origin-4 .ring-2 { animation-delay: 10s; }
-    .ripple-origin-4 .ring-3 { animation-delay: 18s; }
-
-    /* Amber region - bottom right (matches glow-4) */
-    .ripple-origin-5 { bottom: 10%; right: 18%; }
-    .ripple-origin-5 .ripple-ring { width: 36vw; height: 36vw; animation: rippleDrop 26s ease-out infinite; }
-    .ripple-origin-5 .ring-1 { animation-delay: 5s; }
-    .ripple-origin-5 .ring-2 { animation-delay: 14s; }
-    .ripple-origin-5 .ring-3 { animation-delay: 21s; }
-
-    @keyframes rippleDrop {
-      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-      5% { opacity: 0.35; }
-      50% { opacity: 0.15; }
+    @keyframes rippleBreathe {
+      0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+      15% { opacity: 0.3; }
+      50% { opacity: 0.12; }
+      85% { opacity: 0.02; }
       100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
     }
 
@@ -392,6 +374,15 @@
         top: -12%;
         right: 5%;
       }
+
+      .ripple-origin-1 { bottom: 20%; left: 5%; }
+      .ripple-origin-1 .ripple-ring { width: 60vw; height: 60vw; }
+
+      .ripple-origin-2 { top: 15%; right: 5%; }
+      .ripple-origin-2 .ripple-ring { width: 65vw; height: 65vw; }
+
+      .ripple-origin-3 { bottom: 12%; left: 35%; }
+      .ripple-origin-3 .ripple-ring { width: 55vw; height: 55vw; }
     }
 
     @media (max-width: 380px) {
@@ -425,27 +416,14 @@
   <div class="ripple-origin ripple-origin-1">
     <div class="ripple-ring ring-1"></div>
     <div class="ripple-ring ring-2"></div>
-    <div class="ripple-ring ring-3"></div>
   </div>
   <div class="ripple-origin ripple-origin-2">
     <div class="ripple-ring ring-1"></div>
     <div class="ripple-ring ring-2"></div>
-    <div class="ripple-ring ring-3"></div>
   </div>
   <div class="ripple-origin ripple-origin-3">
     <div class="ripple-ring ring-1"></div>
     <div class="ripple-ring ring-2"></div>
-    <div class="ripple-ring ring-3"></div>
-  </div>
-  <div class="ripple-origin ripple-origin-4">
-    <div class="ripple-ring ring-1"></div>
-    <div class="ripple-ring ring-2"></div>
-    <div class="ripple-ring ring-3"></div>
-  </div>
-  <div class="ripple-origin ripple-origin-5">
-    <div class="ripple-ring ring-1"></div>
-    <div class="ripple-ring ring-2"></div>
-    <div class="ripple-ring ring-3"></div>
   </div>
 
   <main class="container">
