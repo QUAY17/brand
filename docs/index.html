@@ -42,7 +42,7 @@
     }
 
     /* Fade in on load */
-    .glow, .ripple-ring {
+    .glow, .drop-ring {
       animation-fill-mode: both;
     }
     body {
@@ -146,48 +146,59 @@
       50% { opacity: 0.5; transform: scale(1.15); }
     }
 
-    /* Water drop ripples - slow breathing expansion from spread-out origins */
-    .ripple-origin {
+    /* Single water drop - one ring expands very slowly per region */
+    .drop-origin {
       position: fixed;
       pointer-events: none;
       z-index: 0;
     }
 
-    .ripple-ring {
+    .drop-ring {
       position: absolute;
+      width: 30vw;
+      height: 30vw;
       border-radius: 50%;
-      border: 1px solid rgba(44, 42, 48, 0.5);
+      border: 1px solid rgba(44, 42, 48, 0.4);
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0.2);
-      filter: blur(5px);
+      filter: blur(6px);
       opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3);
     }
 
-    /* Bottom left */
-    .ripple-origin-1 { bottom: 15%; left: 10%; }
-    .ripple-origin-1 .ripple-ring { width: 35vw; height: 35vw; animation: rippleBreathe 40s ease-in-out infinite; }
-    .ripple-origin-1 .ring-1 { animation-delay: 0s; }
-    .ripple-origin-1 .ring-2 { animation-delay: 13s; }
+    .drop-origin-1 { bottom: 15%; left: 12%; }
+    .drop-origin-1 .drop-ring {
+      animation: waterDrop 36s ease-in-out 8s infinite;
+    }
 
-    /* Top right */
-    .ripple-origin-2 { top: 15%; right: 10%; }
-    .ripple-origin-2 .ripple-ring { width: 38vw; height: 38vw; animation: rippleBreathe 45s ease-in-out infinite; }
-    .ripple-origin-2 .ring-1 { animation-delay: 8s; }
-    .ripple-origin-2 .ring-2 { animation-delay: 23s; }
+    .drop-origin-2 { top: 20%; right: 15%; }
+    .drop-origin-2 .drop-ring {
+      width: 32vw; height: 32vw;
+      animation: waterDrop 40s ease-in-out 22s infinite;
+    }
 
-    /* Center bottom */
-    .ripple-origin-3 { bottom: 10%; left: 45%; }
-    .ripple-origin-3 .ripple-ring { width: 30vw; height: 30vw; animation: rippleBreathe 42s ease-in-out infinite; }
-    .ripple-origin-3 .ring-1 { animation-delay: 5s; }
-    .ripple-origin-3 .ring-2 { animation-delay: 20s; }
+    .drop-origin-3 { bottom: 12%; left: 50%; }
+    .drop-origin-3 .drop-ring {
+      width: 28vw; height: 28vw;
+      animation: waterDrop 38s ease-in-out 35s infinite;
+    }
 
-    @keyframes rippleBreathe {
-      0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
-      15% { opacity: 0.3; }
-      50% { opacity: 0.12; }
-      85% { opacity: 0.02; }
-      100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+    @keyframes waterDrop {
+      0%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+      8% { opacity: 0.25; }
+      25% { opacity: 0.15; }
+      50% { opacity: 0.06; transform: translate(-50%, -50%) scale(0.8); }
+      70% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+      71%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0.3); }
+    }
+
+    @media (max-width: 600px) {
+      .drop-origin-1 { bottom: 20%; left: 5%; }
+      .drop-origin-1 .drop-ring { width: 55vw; height: 55vw; }
+      .drop-origin-2 { top: 15%; right: 5%; }
+      .drop-origin-2 .drop-ring { width: 60vw; height: 60vw; }
+      .drop-origin-3 { bottom: 10%; left: 40%; }
+      .drop-origin-3 .drop-ring { width: 50vw; height: 50vw; }
     }
 
     .container {
@@ -375,14 +386,6 @@
         right: 5%;
       }
 
-      .ripple-origin-1 { bottom: 20%; left: 5%; }
-      .ripple-origin-1 .ripple-ring { width: 60vw; height: 60vw; }
-
-      .ripple-origin-2 { top: 15%; right: 5%; }
-      .ripple-origin-2 .ripple-ring { width: 65vw; height: 65vw; }
-
-      .ripple-origin-3 { bottom: 12%; left: 35%; }
-      .ripple-origin-3 .ripple-ring { width: 55vw; height: 55vw; }
     }
 
     @media (max-width: 380px) {
@@ -413,18 +416,9 @@
   <div class="glow glow-5"></div>
   <div class="glow glow-6"></div>
 
-  <div class="ripple-origin ripple-origin-1">
-    <div class="ripple-ring ring-1"></div>
-    <div class="ripple-ring ring-2"></div>
-  </div>
-  <div class="ripple-origin ripple-origin-2">
-    <div class="ripple-ring ring-1"></div>
-    <div class="ripple-ring ring-2"></div>
-  </div>
-  <div class="ripple-origin ripple-origin-3">
-    <div class="ripple-ring ring-1"></div>
-    <div class="ripple-ring ring-2"></div>
-  </div>
+  <div class="drop-origin drop-origin-1"><div class="drop-ring"></div></div>
+  <div class="drop-origin drop-origin-2"><div class="drop-ring"></div></div>
+  <div class="drop-origin drop-origin-3"><div class="drop-ring"></div></div>
 
   <main class="container">
 
