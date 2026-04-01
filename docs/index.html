@@ -240,21 +240,22 @@
 
     .logo {
       font-family: 'Orbitron', sans-serif;
-      font-size: clamp(4.5rem, 14vw, 8rem);
+      font-size: clamp(3rem, 9vw, 5.5rem);
       font-weight: 400;
       color: var(--orange);
       letter-spacing: 0.08em;
       line-height: 1.15;
       padding-bottom: 0.15em;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .tagline {
       font-family: 'Inter', sans-serif;
-      font-size: clamp(0.65rem, 1.4vw, 0.8rem);
-      font-weight: 300;
+      font-size: 0.65rem;
+      font-weight: 400;
       color: var(--gray);
-      letter-spacing: 0.25em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       margin-bottom: 2.5rem;
     }
 
@@ -262,13 +263,13 @@
       width: 36px;
       height: 1px;
       background: var(--gray-dim);
-      margin: 0 auto 1.75rem;
+      margin: 0 auto 2rem;
     }
 
     /* Highlights */
     .ticker-wrapper {
-      height: 3.5rem;
-      overflow: hidden;
+      height: 5rem;
+      overflow: visible;
       margin-bottom: 3rem;
       position: relative;
     }
@@ -276,15 +277,15 @@
     .ticker-item {
       position: absolute;
       width: 100%;
-      height: 3.5rem;
+      height: 5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 0.25rem;
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(8px);
+      transition: opacity 1s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .ticker-item.active {
@@ -294,22 +295,22 @@
 
     .ticker-item.exit {
       opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(-8px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .ticker-context {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
       font-weight: 400;
-      color: var(--gray-dim);
+      color: var(--gold);
       letter-spacing: 0.3em;
       text-transform: uppercase;
     }
 
     .ticker-stat {
       font-family: 'Inter', sans-serif;
-      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
       font-weight: 500;
       color: var(--gold);
       letter-spacing: 0.08em;
@@ -321,15 +322,16 @@
       justify-content: center;
       gap: 2.5rem;
       flex-wrap: wrap;
+      margin-bottom: 0.75rem;
     }
 
     .links a {
       font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 400;
       color: var(--gray);
       text-decoration: none;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       transition: color 0.25s ease;
       border-bottom: 1px solid transparent;
@@ -364,7 +366,7 @@
       }
 
       .ticker-stat {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
 
       .links {
@@ -372,48 +374,50 @@
         gap: 1rem;
       }
 
-      .glow { filter: blur(45px) !important; }
+      .glow { filter: blur(55px) !important; }
 
+      /* Scale orbs up to fill portrait viewport similarly to desktop.
+         Positions mirror desktop distribution proportionally. */
       .glow-1 {
-        width: 65vw;
-        height: 65vw;
+        width: 85vw;
+        height: 85vw;
         bottom: -8%;
         left: -10%;
       }
 
       .glow-2 {
-        width: 60vw;
-        height: 60vw;
-        top: 15%;
-        right: -12%;
+        width: 80vw;
+        height: 80vw;
+        top: 18%;
+        right: -10%;
       }
 
       .glow-3 {
-        width: 55vw;
-        height: 55vw;
-        bottom: -8%;
-        left: 25%;
+        width: 75vw;
+        height: 75vw;
+        bottom: -5%;
+        left: 20%;
       }
 
       .glow-4 {
-        width: 55vw;
-        height: 55vw;
-        top: 25%;
-        left: -12%;
+        width: 72vw;
+        height: 72vw;
+        top: 28%;
+        left: -15%;
       }
 
       .glow-5 {
-        width: 50vw;
-        height: 50vw;
-        top: -8%;
+        width: 65vw;
+        height: 65vw;
+        top: -5%;
         left: -5%;
       }
 
       .glow-6 {
-        width: 55vw;
-        height: 55vw;
-        top: -8%;
-        right: 0%;
+        width: 70vw;
+        height: 70vw;
+        top: -5%;
+        right: -3%;
       }
 
     }
@@ -493,15 +497,14 @@
       </div>
     </div>
 
+  </main>
+
+  <footer class="footer">
     <nav class="links">
       <a href="https://github.com/QUAY17" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/in/jennifer-quay-minnich" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:quay@quay-cncpts.com">Email</a>
     </nav>
-
-  </main>
-
-  <footer class="footer">
     <span>Quay Concepts &mdash; Miami, FL</span>
   </footer>
 
