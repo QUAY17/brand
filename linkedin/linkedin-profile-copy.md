@@ -17,12 +17,9 @@ ML/AI Engineer | ICML 2026 Co-Author | Public Trust
 ```
 I ship production AI systems for federal agencies and sometimes publish LLM architecture research.
 
-Currently building AI systems for federal agencies -- governance databases, 
+Currently building AI systems -- governance databases, 
 document generators, and testing frameworks. Previously, deep learning 
 research with national laboratories.
-
-
-ICML 2026 co-author. Public Trust clearance. 9+ years production software.
 
 quay-cncpts.com
 ```
