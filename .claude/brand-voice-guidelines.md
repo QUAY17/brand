@@ -411,22 +411,29 @@ Each project below includes the real technical scope (from source code and READM
 ### JENNY -- Intelligent Document Generator
 - **Repo**: github.com/QUAY17/JENNY (public, MIT)
 - **Disclosure level**: Full -- public repo with published research
+- **Timeline**: Feb 2026 -- Mar 2026
+- **Awards**: 2026 FORUM Innovation Award
 - **What it actually does**: Model-agnostic SOP generator that converts draft documents into federally compliant formatted output. Two-phase architecture: LLM extracts structured content (title, purpose, scope, steps, images, hyperlinks), then deterministic Python pipeline handles template mutation with 82-84 validation gates. Processes both .docx and .pdf. Flask backend, React frontend.
-- **Key metrics**: 88% token cost reduction vs monolithic LLM, 100% structural compliance across all tested SOPs (82-84 checks each), 15-25x cost reduction over LLM-heavy approaches
+- **Key metrics**: 88% token cost reduction vs monolithic LLM, 100% structural compliance across all tested SOPs (82-84 checks each), 15-20x cost reduction over LLM-heavy approaches
+- **Core positioning (leadership / non-technical)**: A smarter way to LLM for Intelligent Document Processing. The innovation is in the architecture. Built to support document processing functionality with more code execution and less LLM calls. More accuracy and less token usage. JENNY generates highly regulated official documents at a cost reduction of 15-20x.
 - **Resume bullet (high-level)**: "Developed model-agnostic document generator reducing LLM token costs by 88% through split-phase architecture separating text extraction from deterministic template execution."
 - **Resume bullet (detailed)**: "Architected two-phase SOP generator: LLM handles content extraction, Python pipeline handles template mutation with 82-84 validation gates per document, achieving 100% structural compliance and 15-25x cost reduction over monolithic approaches."
 - **LinkedIn post angle**: The architectural insight -- most LLM cost comes from using the model for work that deterministic code does better. Show the split-phase decision.
-- **Interview talking point**: "I looked at where the LLM was actually needed vs where Python could do the job. Turns out only about 12% of the pipeline needs an LLM. That architectural decision saved 88% on token costs."
+- **Interview talking point (technical)**: "I looked at where the LLM was actually needed vs where Python could do the job. Turns out only about 12% of the pipeline needs an LLM. That architectural decision saved 88% on token costs."
+- **Interview talking point (leadership)**: "JENNY won the 2026 FORUM Innovation Award. The innovation is in the architecture -- more code execution, less LLM calls. That means more accuracy, less token usage, and 15-20x cost reduction on regulated document generation."
 
-### AIEA CIS TRM Backend -- Technology Reference Model Database
+### AIEA CIS TRM Backend -- Technology Reference Model
 - **Repo**: archsystemsinc-com (employer org, likely private)
-- **Disclosure level**: HIGH-LEVEL ONLY -- can reference DHS/USCIS, describe the problem and architecture pattern, but do not name specific internal systems (CARES, Mobius) or data volumes by source
+- **Disclosure level**: HIGH-LEVEL ONLY -- can reference DHS/USCIS, describe the problem and architecture pattern, but do not name specific internal systems (CARES, Mobius) or data volumes by source. $9M+ aggregate savings is approved.
 - **What it actually does**: Consolidated 15 disparate software inventory, licensing, approval, security, and cloud service data sources into a normalized PostgreSQL schema with 42 tables and 10 views. Includes crosswalk normalization layer, 5-criteria scoring matrix, LLM-generated product knowledge base, redundancy detection, compliance gap analysis, and cloud cost tracking. 13 data loaders with dry-run support. Docker-containerized.
-- **Key metrics**: 15 source systems consolidated, 42 tables, 10 analytical views, 5-criteria scoring framework, dual-source validation (LLM-generated KB cross-referenced against SME reports)
+- **Key metrics**: 15 source systems consolidated, 42 tables, 10 analytical views, 5-criteria scoring framework, dual-source validation (LLM-generated KB cross-referenced against SME reports), $9M+ in identified savings
+- **Core positioning (EA / leadership)**: The TRM is an Enterprise Architecture asset -- a unified technology reference model that gave DHS leadership a single source of truth across a fragmented technology landscape. 15 disconnected systems meant no one had a complete picture of what the agency owned, what it cost, or where it overlapped. The TRM made enterprise-wide decisions on consolidation, compliance, and spend possible for the first time. $9M+ in identified savings is an EA outcome -- it required the architectural view to see it.
+- **Resume bullet (EA-level)**: "Built the Technology Reference Model unifying 15 fragmented data sources into a single enterprise view of software assets, licensing, compliance, and cloud spend -- enabling $9M+ in consolidation decisions for DHS."
 - **Resume bullet (safe for public)**: "Consolidated 15 disparate software inventory and licensing data sources into a normalized PostgreSQL schema enabling compliance gap analysis, license optimization, and enterprise software reduction decisions for DHS."
-- **Resume bullet (alternate angle)**: "Designed crosswalk normalization layer mapping messy multi-source data to canonical golden records, supporting a 5-criteria scoring framework for software consolidation prioritization across DHS."
+- **Resume bullet (technical)**: "Designed crosswalk normalization layer mapping messy multi-source data to canonical golden records, supporting a 5-criteria scoring framework for software consolidation prioritization across DHS."
 - **LinkedIn post angle**: The data governance problem -- when an enterprise has 15 different systems tracking software and none of them agree. How crosswalk normalization creates a single source of truth.
-- **Interview talking point**: "The core challenge was that 15 different systems all had different names for the same software. I built a crosswalk normalization layer that maps every messy source record to a canonical golden record, with confidence scoring and validation. That unlocked every downstream analysis -- compliance gaps, license waste, redundancy detection."
+- **Interview talking point (technical)**: "The core challenge was that 15 different systems all had different names for the same software. I built a crosswalk normalization layer that maps every messy source record to a canonical golden record, with confidence scoring and validation. That unlocked every downstream analysis -- compliance gaps, license waste, redundancy detection."
+- **Interview talking point (leadership)**: "Nobody had the full picture. 15 systems, no agreement on what the agency owned or what it cost. I built the Technology Reference Model that gave leadership a single enterprise view for the first time. That's where the $9M+ in savings came from -- you can't consolidate what you can't see."
 
 ### Basic-Needs-Evaluation-Using-NLP -- Survey Analysis Platform
 - **Repo**: github.com/QUAY17/Basic-Needs-Evaluation-Using-NLP (public)
