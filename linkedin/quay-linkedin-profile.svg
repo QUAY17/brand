@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="g1" cx="15%" cy="85%" r="70%">
+      <stop offset="0%" stop-color="#5B2D9E" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="85%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="50%" cy="90%" r="60%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g4" cx="5%" cy="15%" r="45%">
+      <stop offset="0%" stop-color="#9333EA" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g5" cx="90%" cy="10%" r="50%">
+      <stop offset="0%" stop-color="#1E3A6E" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#2F3136"/>
+  <rect width="400" height="400" fill="url(#g1)"/>
+  <rect width="400" height="400" fill="url(#g2)"/>
+  <rect width="400" height="400" fill="url(#g3)"/>
+  <rect width="400" height="400" fill="url(#g4)"/>
+  <rect width="400" height="400" fill="url(#g5)"/>
+  <!-- Quay in Orbitron - title case, centered in artboard -->
+  <g transform="translate(76, 220) scale(0.082, -0.082)" fill="#E07020">
+    <!-- Q (uppercase) -->
+    <path d="M646 0V36L774 123V81H868V0ZM174 0Q141 0 113.5 16Q86 32 70 59.5Q54 87 54 120V600Q54 633 70 660.5Q86 688 113.5 704Q141 720 174 720H654Q687 720 714.5 704Q742 688 758 660.5Q774 633 774 600V120Q774 87 758 59.5Q742 32 714.5 16Q687 0 654 0ZM174 81H654Q670 81 681.5 92.5Q693 104 693 120V600Q693 616 681.5 627.5Q670 639 654 639H174Q158 639 146.5 627.5Q135 616 135 600V120Q135 104 146.5 92.5Q158 81 174 81Z"/>
+    <!-- u (lowercase) -->
+    <g transform="translate(920, 0)">
+      <path d="M174 0Q141 0 113.5 16.5Q86 33 69.5 60.5Q53 88 53 121V580H135V121Q135 105 146.5 93.5Q158 82 174 82H522Q538 82 550 93.5Q562 105 562 121V580H644V121Q644 88 627.5 60.5Q611 33 583.5 16.5Q556 0 522 0H174Z"/>
+    </g>
+    <!-- a (lowercase) -->
+    <g transform="translate(1660, 0)">
+      <path d="M173 0Q140 0 112.5 16.5Q85 33 68.5 60.5Q52 88 52 121V331H560V459Q560 475 548.5 486.5Q537 498 521 498H52V580H521Q555 580 582.5 563.5Q610 547 626.5 519.5Q643 492 643 459V0ZM173 82H560V249H134V121Q134 105 145.5 93.5Q157 82 173 82Z"/>
+    </g>
+    <!-- y (lowercase, has descender) -->
+    <g transform="translate(2390, 0)">
+      <path d="M149 -230V-147H511Q527 -147 538.5 -135.5Q550 -124 550 -108V0H163Q130 0 102.5 16.5Q75 33 58.5 60.5Q42 88 42 121V578H124V121Q124 105 135.5 93.5Q147 82 163 82H511Q527 82 538.5 93.5Q550 105 550 121V578H632V-108Q632 -142 616 -169.5Q600 -197 572.5 -213.5Q545 -230 511 -230Z"/>
+    </g>
+  </g>
+  <!-- Tagline - matches website: Inter 300, title case, wide space between phrases -->
+  <text x="76" y="258" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="300" fill="#B0B5BC" text-anchor="start" letter-spacing="1.5">Designing Intelligence</text>
+  <text x="324" y="258" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="300" fill="#B0B5BC" text-anchor="end" letter-spacing="1.5">Developing the Future</text>
+</svg>
