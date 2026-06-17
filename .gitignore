@@ -17,11 +17,18 @@ Thumbs.db
 credentials.*
 
 # Claude settings
-.claude/settings.local.json
+.claude
 
 # Site plan (outdated)
 docs/site-plan.md
 
-# Logo assets
+# assets
+assets
 docs/quay-logo-old.png
 linkedin/quay-profile.png
+
+# ip
+ip
+
+# resume
+design_handoff_resume
