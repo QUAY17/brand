@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUAY — Brand Assets</title>
+<link rel="icon" type="image/svg+xml" href="../assets/quay-favicon.svg">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#0A090C;color:var(--text-primary);font-family:var(--font-sans);padding:56px 48px 110px;
+    background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:24px 24px;}
+  .wrap{max-width:1080px;margin:0 auto;}
+  .eyebrow{font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:var(--text-tertiary);display:flex;align-items:center;gap:9px;margin-bottom:14px;}
+  .eyebrow .d{width:6px;height:6px;border-radius:50%;background:#E07020;box-shadow:0 0 8px #E07020;}
+  h1{font-family:var(--font-display);font-weight:300;font-size:32px;margin-bottom:10px;}
+  .lede{font-size:13px;color:var(--text-secondary);max-width:640px;line-height:1.6;font-weight:300;margin-bottom:48px;}
+
+  .sec{margin-bottom:40px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+  .sec-head .lab{font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-secondary);}
+  .sec-head .rule{flex:1;height:1px;background:var(--rule-hairline);}
+
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+  .cell{padding:46px 40px;display:flex;flex-direction:column;gap:24px;}
+  .cell.dark{background:#18171B;}
+  .cell.paper{background:#F4F1EA;}
+  .cell .fn{font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;}
+  .cell.dark .fn{color:var(--text-tertiary);}
+  .cell.paper .fn{color:#8A8690;}
+
+  .logo-hold{display:flex;align-items:center;min-height:96px;}
+  .logo-hold svg{height:72px;width:auto;display:block;}
+
+  .fav-hold{display:flex;align-items:flex-end;gap:26px;}
+  .fav-hold .u{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .fav-hold img{display:block;border-radius:3px;}
+  .fav-hold .z{font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;}
+  .cell.dark .z{color:var(--text-tertiary);}
+  .cell.paper .z{color:#8A8690;}
+
+  .dl{display:inline-flex;align-items:center;gap:10px;margin-top:8px;background:transparent;border:1px solid rgba(224,112,32,0.5);color:#E4BD54;font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:13px 20px;border-radius:2px;text-decoration:none;box-shadow:0 0 22px -8px rgba(224,112,32,0.55);}
+  .note{font-size:12px;color:var(--text-tertiary);line-height:1.65;font-weight:300;margin-top:32px;max-width:760px;border-top:1px solid var(--rule-hairline);padding-top:22px;}
+  .note b{color:var(--text-secondary);font-weight:500;}
+  .note .mono{font-family:var(--font-mono);color:var(--text-secondary);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow"><span class="d"></span>Deliverable · Brand Assets</div>
+  <h1>QUAY — Logo &amp; Favicon</h1>
+  <p class="lede">The final set, light and dark. The circle-and-stem Q is the through-line — a clean complete ring with the stem through the bottom. It sits in a tile as the favicon, and travels beside the wordmark as the logo. Orange→gold gradient throughout.</p>
+
+  <!-- LOGOS -->
+  <div class="sec">
+    <div class="sec-head"><span class="lab">Logo — wordmark lockup</span><span class="rule"></span></div>
+    <div class="pair">
+      <div class="cell dark">
+        <div class="logo-hold">
+          <svg viewBox="0 0 232 72" aria-label="QUAY">
+            <defs>
+              <radialGradient id="lbg" cx="30%" cy="80%" r="75%"><stop offset="0%" stop-color="#E07020" stop-opacity="0.16"/><stop offset="100%" stop-color="#18171B" stop-opacity="0"/></radialGradient>
+              <linearGradient id="lqg" gradientUnits="userSpaceOnUse" x1="20" y1="18" x2="44" y2="50"><stop offset="0%" stop-color="#E07020"/><stop offset="100%" stop-color="#E4BD54"/></linearGradient>
+              <filter id="lglow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2"/></filter>
+            </defs>
+            <g transform="translate(0,4)">
+              <rect width="64" height="64" rx="2.5" fill="#18171B"/>
+              <rect width="64" height="64" rx="2.5" fill="url(#lbg)"/>
+              <rect x="3" y="3" width="58" height="58" rx="1.5" fill="none" stroke="#E4E6E9" stroke-opacity="0.09"/>
+              <g fill="none" stroke="url(#lqg)" stroke-width="4" stroke-linecap="butt" filter="url(#lglow)" opacity="0.9"><circle cx="31" cy="30" r="12"/><line x1="31" y1="30" x2="31" y2="50"/></g>
+              <g fill="none" stroke="url(#lqg)" stroke-width="4" stroke-linecap="butt"><circle cx="31" cy="30" r="12"/><line x1="31" y1="30" x2="31" y2="50"/></g>
+            </g>
+            <text x="86" y="48" font-family="Syne, sans-serif" font-weight="500" font-size="38" letter-spacing="4" fill="#F0EDE6">QUAY</text>
+          </svg>
+        </div>
+        <span class="fn">logo-dark.svg</span>
+      </div>
+      <div class="cell paper">
+        <div class="logo-hold">
+          <svg viewBox="0 0 232 72" aria-label="QUAY">
+            <defs>
+              <radialGradient id="pbg" cx="30%" cy="80%" r="75%"><stop offset="0%" stop-color="#E07020" stop-opacity="0.12"/><stop offset="100%" stop-color="#F4F1EA" stop-opacity="0"/></radialGradient>
+              <linearGradient id="pqg" gradientUnits="userSpaceOnUse" x1="20" y1="18" x2="44" y2="50"><stop offset="0%" stop-color="#E07020"/><stop offset="100%" stop-color="#C8970A"/></linearGradient>
+            </defs>
+            <g transform="translate(0,4)">
+              <rect width="64" height="64" rx="2.5" fill="#FFFFFF"/>
+              <rect width="64" height="64" rx="2.5" fill="url(#pbg)"/>
+              <rect x="2.5" y="2.5" width="59" height="59" rx="2" fill="none" stroke="#18171B" stroke-opacity="0.14"/>
+              <g fill="none" stroke="url(#pqg)" stroke-width="4" stroke-linecap="butt"><circle cx="31" cy="30" r="12"/><line x1="31" y1="30" x2="31" y2="50"/></g>
+            </g>
+            <text x="86" y="48" font-family="Syne, sans-serif" font-weight="500" font-size="38" letter-spacing="4" fill="#18171B">QUAY</text>
+          </svg>
+        </div>
+        <span class="fn">logo-light.svg</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAVICONS -->
+  <div class="sec">
+    <div class="sec-head"><span class="lab">Favicon — icon mark</span><span class="rule"></span></div>
+    <div class="pair">
+      <div class="cell dark">
+        <div class="fav-hold">
+          <div class="u"><img src="favicon-dark.svg" width="72" height="72" alt=""><span class="z">72</span></div>
+          <div class="u"><img src="favicon-dark.svg" width="48" height="48" alt=""><span class="z">48</span></div>
+          <div class="u"><img src="favicon-dark.svg" width="32" height="32" alt=""><span class="z">32</span></div>
+          <div class="u"><img src="favicon-dark.svg" width="16" height="16" alt=""><span class="z">16</span></div>
+        </div>
+        <span class="fn">favicon-dark.svg</span>
+      </div>
+      <div class="cell paper">
+        <div class="fav-hold">
+          <div class="u"><img src="favicon-light.svg" width="72" height="72" alt=""><span class="z">72</span></div>
+          <div class="u"><img src="favicon-light.svg" width="48" height="48" alt=""><span class="z">48</span></div>
+          <div class="u"><img src="favicon-light.svg" width="32" height="32" alt=""><span class="z">32</span></div>
+          <div class="u"><img src="favicon-light.svg" width="16" height="16" alt=""><span class="z">16</span></div>
+        </div>
+        <span class="fn">favicon-light.svg</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="note"><b>Four files</b>, in <span class="mono">brand-assets/</span>: <span class="mono">logo-dark.svg</span>, <span class="mono">logo-light.svg</span>, <span class="mono">favicon-dark.svg</span>, <span class="mono">favicon-light.svg</span>. All vector, all the orange→gold gradient. The logos embed Syne via Google Fonts (render on direct open / inline). Use the download button below for the whole set. Say the word if you also want flat PNGs or an <span class="mono">.ico</span> bundle for the site <span class="mono">&lt;head&gt;</span>.</p>
+</div>
+</body>
+</html>

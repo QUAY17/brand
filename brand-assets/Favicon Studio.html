@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUAY — Favicon Studio</title>
+<link rel="icon" type="image/svg+xml" href="assets/quay-favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:#D9D4C8;
+    color:var(--paper-ink);
+    font-family:var(--font-sans);
+    min-height:100vh;
+    padding:48px 40px 96px;
+  }
+  .wrap{max-width:1120px;margin:0 auto;}
+
+  .coord{font-family:var(--font-mono);font-weight:500;letter-spacing:0.16em;}
+  .eyebrow{font-family:var(--font-sans);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:#8A8690;}
+
+  header.mast{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid rgba(24,23,27,0.16);padding-bottom:20px;margin-bottom:40px;}
+  header.mast h1{font-family:'Syne',sans-serif;font-weight:600;font-size:30px;letter-spacing:0.01em;}
+  header.mast p{font-size:13px;color:var(--paper-ink-muted);margin-top:9px;max-width:520px;line-height:1.55;}
+  header.mast .meta{text-align:right;display:flex;flex-direction:column;gap:5px;}
+  header.mast .meta .coord{font-size:11px;color:#8A8690;}
+  header.mast .meta .coord.lum{color:#1F7A8C;}
+
+  .studio{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;}
+
+  /* ---- stage ---- */
+  .stage{background:#FFFFFF;border:1px solid rgba(24,23,27,0.08);box-shadow:var(--shadow-card-paper);padding:40px;}
+  .stage .label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#8A8690;margin-bottom:28px;}
+
+  .hero-fav{display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+  .hero-fav .big{width:208px;height:208px;flex-shrink:0;border-radius:6px;display:block;}
+  .sizes{display:flex;align-items:flex-end;gap:28px;}
+  .sizes .u{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .sizes .u .px{font-family:var(--font-mono);font-size:9.5px;color:#8A8690;letter-spacing:0.1em;}
+  .sizes img{display:block;border-radius:3px;}
+
+  .tab-row{margin-top:36px;padding-top:28px;border-top:1px solid rgba(24,23,27,0.08);display:flex;align-items:flex-end;gap:18px;}
+  .tabwin{display:flex;flex-direction:column;}
+  .tabbar{display:flex;gap:4px;}
+  .tab{display:inline-flex;align-items:center;gap:8px;background:#ECE8DF;border:1px solid rgba(24,23,27,0.10);border-bottom:none;border-radius:7px 7px 0 0;padding:8px 12px 9px;}
+  .tab.active{background:#FFFFFF;}
+  .tab img{width:16px;height:16px;border-radius:3px;}
+  .tab .tt{font-size:11.5px;color:var(--paper-ink-muted);white-space:nowrap;}
+  .tab .x{color:#8A8690;font-size:11px;margin-left:4px;}
+  .tabwin .pagebar{height:8px;background:#FFFFFF;border:1px solid rgba(24,23,27,0.10);border-top:none;border-radius:0 0 4px 4px;}
+
+  .dock-row{margin-top:36px;padding-top:28px;border-top:1px solid rgba(24,23,27,0.08);display:flex;align-items:center;gap:22px;}
+  .dock-row .desc{font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:#8A8690;}
+
+  /* ---- controls ---- */
+  .panel{background:#18171B;color:var(--quay-bone);padding:26px 24px 28px;position:relative;}
+  .panel .br{position:absolute;width:12px;height:12px;}
+  .panel .br.tl{top:8px;left:8px;border-top:1px solid #7A8290;border-left:1px solid #7A8290;}
+  .panel .br.tr{top:8px;right:8px;border-top:1px solid #7A8290;border-right:1px solid #7A8290;}
+  .panel .br.bl{bottom:8px;left:8px;border-bottom:1px solid #7A8290;border-left:1px solid #7A8290;}
+  .panel .br.br2{bottom:8px;right:8px;border-bottom:1px solid #7A8290;border-right:1px solid #7A8290;}
+
+  .panel h2{font-family:var(--font-mono);font-size:10px;letter-spacing:0.28em;text-transform:uppercase;color:#4DD0E8;font-weight:500;margin-bottom:22px;display:flex;align-items:center;gap:9px;}
+  .panel h2 .dot{width:5px;height:5px;border-radius:50%;background:#4DD0E8;box-shadow:0 0 8px #4DD0E8;}
+
+  .presets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:24px;}
+  .presets button{font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--quay-gray);background:transparent;border:1px solid rgba(228,230,233,0.16);border-radius:2px;padding:9px 4px;cursor:pointer;transition:all .15s ease;}
+  .presets button:hover{border-color:#4DD0E8;color:#fff;}
+  .presets button.on{border-color:#4DD0E8;color:#4DD0E8;background:rgba(77,208,232,0.08);}
+
+  .ctl{margin-bottom:18px;}
+  .ctl .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .ctl .top .k{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--quay-gray);font-family:var(--font-sans);}
+  .ctl .top .v{font-family:var(--font-mono);font-size:11px;color:#4DD0E8;font-weight:500;}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:2px;background:rgba(228,230,233,0.18);outline:none;}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:#E07020;cursor:pointer;border:2px solid #18171B;box-shadow:0 0 0 1px #E07020;}
+  input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:#E07020;cursor:pointer;border:2px solid #18171B;}
+
+  .seg{display:flex;gap:6px;}
+  .seg button{flex:1;font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--quay-gray);background:transparent;border:1px solid rgba(228,230,233,0.16);border-radius:2px;padding:8px 4px;cursor:pointer;}
+  .seg button.on{border-color:#E07020;color:#E07020;background:rgba(224,112,32,0.08);}
+
+  .divider{height:1px;background:rgba(228,230,233,0.12);margin:22px 0;}
+
+  .actions{display:flex;gap:8px;}
+  .actions a,.actions button{flex:1;text-align:center;text-decoration:none;font-family:var(--font-mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:11px 6px;border-radius:2px;cursor:pointer;border:1px solid;}
+  .actions .dl{background:#6B1E2A;border-color:#8B2A38;color:#fff;}
+  .actions .dl:hover{background:#8B2A38;}
+  .actions .cp{background:transparent;border-color:rgba(228,230,233,0.22);color:var(--quay-bone);}
+  .actions .cp:hover{border-color:#4DD0E8;color:#4DD0E8;}
+
+  .src{margin-top:18px;}
+  .src textarea{width:100%;height:120px;resize:vertical;background:#0E0D11;border:1px solid rgba(228,230,233,0.12);border-radius:3px;color:var(--quay-gray);font-family:var(--font-mono);font-size:10px;line-height:1.5;padding:10px;}
+
+  .hint{font-size:11px;color:var(--paper-ink-muted);line-height:1.55;margin-top:22px;max-width:680px;}
+  .hint .mono{font-family:var(--font-mono);color:var(--paper-ink);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div>
+      <h1>Favicon Studio</h1>
+      <p>The orange Q on cream paper. Play with the tail — direction, reach, how far it cuts into the bowl, weight, and cap. Everything previews live at real favicon sizes.</p>
+    </div>
+    <div class="meta">
+      <div class="coord">REF · 0223-FAV</div>
+      <div class="coord lum">PAPER · CREAM</div>
+      <div class="coord">V2 · MMXXVI</div>
+    </div>
+  </header>
+
+  <div class="studio">
+
+    <!-- STAGE -->
+    <div class="stage">
+      <div class="label">Live preview — cream paper</div>
+      <div class="hero-fav">
+        <span class="big" id="big"></span>
+        <div class="sizes">
+          <div class="u"><img id="s64" width="64" height="64" alt=""><span class="px">64</span></div>
+          <div class="u"><img id="s32" width="32" height="32" alt=""><span class="px">32</span></div>
+          <div class="u"><img id="s16" width="16" height="16" alt=""><span class="px">16</span></div>
+        </div>
+      </div>
+
+      <div class="tab-row">
+        <div class="tabwin">
+          <div class="tabbar">
+            <div class="tab active"><img id="t1" alt=""><span class="tt">Quay Concepts</span><span class="x">×</span></div>
+            <div class="tab"><span class="tt" style="color:#A8A29A;">Inbox (3)</span><span class="x">×</span></div>
+          </div>
+          <div class="pagebar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="panel">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br2"></span>
+      <h2><span class="dot"></span>Tail Geometry</h2>
+
+      <div class="presets" id="presets">
+        <button data-p="power">Power ★</button>
+        <button data-p="right">Right</button>
+        <button data-p="kick">Kick</button>
+        <button data-p="cross">Cross</button>
+        <button data-p="down">Down-Right</button>
+        <button data-p="tangent">Tangent</button>
+      </div>
+
+      <div class="ctl">
+        <div class="top"><span class="k">Direction</span><span class="v" id="vAngle"></span></div>
+        <input type="range" id="angle" min="-10" max="90" step="1">
+      </div>
+      <div class="ctl">
+        <div class="top"><span class="k">Reach / length</span><span class="v" id="vLen"></span></div>
+        <input type="range" id="len" min="4" max="20" step="0.5">
+      </div>
+      <div class="ctl">
+        <div class="top"><span class="k">Cut into bowl</span><span class="v" id="vCut"></span></div>
+        <input type="range" id="cut" min="0" max="12" step="0.5">
+      </div>
+      <div class="ctl">
+        <div class="top"><span class="k">Tail weight</span><span class="v" id="vTw"></span></div>
+        <input type="range" id="tw" min="3" max="9" step="0.25">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="ctl">
+        <div class="top"><span class="k">Cap</span></div>
+        <div class="seg" id="cap">
+          <button data-c="butt">Flat</button>
+          <button data-c="round">Round</button>
+        </div>
+      </div>
+      <div class="ctl">
+        <div class="top"><span class="k">Bowl weight</span><span class="v" id="vBw"></span></div>
+        <input type="range" id="bw" min="4" max="8" step="0.25">
+      </div>
+      <div class="ctl">
+        <div class="top"><span class="k">Bowl size</span><span class="v" id="vBr"></span></div>
+        <input type="range" id="br" min="9" max="14" step="0.25">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="actions">
+        <button class="cp" id="copy">Copy SVG</button>
+        <a class="dl" id="download" download="quay-favicon.svg">Download</a>
+      </div>
+      <div class="src"><textarea id="src" readonly spellcheck="false"></textarea></div>
+    </div>
+
+  </div>
+
+  <p class="hint">Tail is radial — <span class="mono">Direction</span> sets the clock angle (0° = straight right, higher = down-right), <span class="mono">Reach</span> how far it extends past the bowl, <span class="mono">Cut</span> how far it bites back into the bowl for the join. When you land on one you like, hit <span class="mono">Copy SVG</span> or <span class="mono">Download</span> — or just tell me the preset and I'll ship it as the system default and regenerate the dark / bracketed / pilot variants to match.</p>
+
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const TILE = 64, CX = 31, CY = 30;
+  const CREAM = '#F4F1EA', INK = 'rgba(24,23,27,0.12)', ORANGE = '#E07020';
+
+  const PRESETS = {
+    power:   { angle: 90, len: 6,  cut: 12, tw: 4,   cap:'butt',  bw:4,   br:12 },
+    right:   { angle: 8,  len: 13, cut: 7,  tw: 5.5, cap:'butt',  bw:5.5, br:12.5 },
+    kick:    { angle: 22, len: 13, cut: 7,  tw: 5.5, cap:'butt',  bw:5.5, br:12.5 },
+    cross:   { angle: 45, len: 10, cut: 10, tw: 5.5, cap:'butt',  bw:5.5, br:12.5 },
+    down:    { angle: 48, len: 14, cut: 3,  tw: 5,   cap:'round', bw:5,   br:12 },
+    tangent: { angle: 64, len: 13, cut: 8,  tw: 5,   cap:'butt',  bw:5,   br:12 },
+  };
+
+  let S = Object.assign({}, PRESETS.power);
+  try { const saved = JSON.parse(localStorage.getItem('quay_fav_v2')); if (saved) S = Object.assign(S, saved); } catch(e){}
+
+  function buildSVG(s, withTile){
+    const rad = s.angle * Math.PI/180;
+    const sx = CX + (s.br - s.cut) * Math.cos(rad);
+    const sy = CY + (s.br - s.cut) * Math.sin(rad);
+    const ex = CX + (s.br + s.len) * Math.cos(rad);
+    const ey = CY + (s.br + s.len) * Math.sin(rad);
+    const f = n => Math.round(n*100)/100;
+    const tile = withTile ? `
+  <rect width="64" height="64" rx="3" fill="${CREAM}"/>
+  <rect x="2.5" y="2.5" width="59" height="59" rx="2" fill="none" stroke="#18171B" stroke-opacity="0.12"/>` : '';
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">${tile}
+  <g fill="none" stroke="${ORANGE}" stroke-linecap="${s.cap}">
+    <circle cx="${CX}" cy="${CY}" r="${f(s.br)}" stroke-width="${f(s.bw)}"/>
+    <line x1="${f(sx)}" y1="${f(sy)}" x2="${f(ex)}" y2="${f(ey)}" stroke-width="${f(s.tw)}"/>
+  </g>
+</svg>`;
+  }
+
+  function uri(svg){ return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg); }
+
+  function render(){
+    const svgTiled = buildSVG(S, true);
+    $('big').style.background = `${CREAM} url("${uri(svgTiled)}") center/cover no-repeat`;
+    $('s64').src = uri(svgTiled);
+    $('s32').src = uri(svgTiled);
+    $('s16').src = uri(svgTiled);
+    $('t1').src  = uri(svgTiled);
+
+    $('vAngle').textContent = S.angle + '°';
+    $('vLen').textContent = S.len;
+    $('vCut').textContent = S.cut;
+    $('vTw').textContent = S.tw;
+    $('vBw').textContent = S.bw;
+    $('vBr').textContent = S.br;
+
+    $('angle').value=S.angle; $('len').value=S.len; $('cut').value=S.cut;
+    $('tw').value=S.tw; $('bw').value=S.bw; $('br').value=S.br;
+    [...$('cap').children].forEach(b=>b.classList.toggle('on', b.dataset.c===S.cap));
+
+    const out = buildSVG(S, true);
+    $('src').value = out;
+    $('download').href = uri(out);
+
+    // preset match highlight
+    let match='';
+    for(const [k,v] of Object.entries(PRESETS)){
+      if(['angle','len','cut','tw','cap','bw','br'].every(p=>v[p]===S[p])) match=k;
+    }
+    [...$('presets').children].forEach(b=>b.classList.toggle('on', b.dataset.p===match));
+
+    localStorage.setItem('quay_fav_v2', JSON.stringify(S));
+  }
+
+  ['angle','len','cut','tw','bw','br'].forEach(id=>{
+    $(id).addEventListener('input', e=>{ S[id]=parseFloat(e.target.value); render(); });
+  });
+  $('cap').addEventListener('click', e=>{ if(e.target.dataset.c){ S.cap=e.target.dataset.c; render(); }});
+  $('presets').addEventListener('click', e=>{ if(e.target.dataset.p){ S=Object.assign({},PRESETS[e.target.dataset.p]); render(); }});
+  $('copy').addEventListener('click', ()=>{ navigator.clipboard && navigator.clipboard.writeText($('src').value); $('copy').textContent='Copied'; setTimeout(()=>$('copy').textContent='Copy SVG',1200); });
+
+  render();
+</script>
+</body>
+</html>

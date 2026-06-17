@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUAY — Logo & Favicon</title>
+<link rel="icon" type="image/svg+xml" href="assets/quay-favicon.svg">
+<link rel="stylesheet" href="styles.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:#0A090C;
+    color:var(--text-primary);
+    font-family:var(--font-sans);
+    padding:60px 48px 120px;
+    background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+    background-size:24px 24px;
+  }
+  .wrap{max-width:1120px;margin:0 auto;}
+
+  .mono{font-family:var(--font-mono);}
+  .eyebrow{font-family:var(--font-sans);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:var(--text-tertiary);}
+  .coord{font-family:var(--font-mono);font-size:11px;letter-spacing:0.16em;}
+
+  header.mast{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--rule-medium);padding-bottom:22px;margin-bottom:56px;}
+  header.mast h1{font-family:var(--font-display);font-weight:300;font-size:34px;line-height:1.05;}
+  header.mast p{font-size:13px;color:var(--text-secondary);margin-top:10px;max-width:580px;line-height:1.6;font-weight:300;}
+
+  section{margin-bottom:72px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+  .sec-head .lab{font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--text-secondary);}
+  .sec-head .rule{flex:1;height:1px;background:var(--rule-hairline);}
+  .sec-head .ref{font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;color:var(--text-tertiary);}
+  .frame-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:12px;}
+
+  /* ── unified mark panel ── */
+  .mark-pair{display:grid;grid-template-columns:1fr 1fr;gap:2px;}
+  .mark-panel{padding:52px 56px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+  .mark-panel.dark{background:#18171B;}
+  .mark-panel.paper{background:#F4F1EA;}
+
+  /* lockup */
+  .lockup{display:inline-flex;align-items:center;gap:24px;}
+  .lockup img{width:62px;height:62px;display:block;border-radius:3px;}
+  .word-dark{font-family:'Syne',sans-serif;font-weight:500;font-size:42px;letter-spacing:0.05em;text-transform:uppercase;line-height:0.9;color:#F0EDE6;text-shadow:0 0 28px rgba(224,112,32,0.35),0 0 60px rgba(228,189,84,0.15);}
+  .word-paper{font-family:'Syne',sans-serif;font-weight:500;font-size:42px;letter-spacing:0.05em;text-transform:uppercase;line-height:0.9;color:#18171B;}
+  .sub{margin-top:10px;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;}
+  .sub.dark{color:#7A8290;}
+  .sub.paper{color:#8A8690;}
+
+  .panel-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;}
+  .panel-meta .c{font-family:var(--font-mono);font-size:10px;letter-spacing:0.18em;}
+  .panel-meta .c.dark{color:var(--accent-pilot);}
+  .panel-meta .c.paper{color:#1F7A8C;}
+  .panel-meta .c.dim-dark{color:var(--text-tertiary);}
+  .panel-meta .c.dim-paper{color:#8A8690;}
+
+  /* bridge seam label */
+  .seam{background:#121116;border-top:1px solid var(--rule-hairline);border-bottom:1px solid var(--rule-hairline);padding:11px 56px;display:flex;align-items:center;justify-content:space-between;}
+  .seam .pill{font-family:var(--font-mono);font-size:9px;letter-spacing:0.2em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--rule-medium);border-radius:2px;color:var(--text-tertiary);}
+  .seam .grad-bar{flex:1;height:1px;margin:0 20px;background:linear-gradient(90deg,#E07020,#E4BD54);}
+
+  /* favicon strip */
+  .fav-strip{display:flex;align-items:flex-start;gap:40px;}
+  .fav-unit{display:flex;flex-direction:column;gap:8px;align-items:center;}
+  .fav-unit img{display:block;border-radius:3px;}
+  .fav-unit .z{font-family:var(--font-mono);font-size:9px;letter-spacing:0.1em;color:var(--text-tertiary);}
+
+  /* tab mock */
+  .tab-group{display:flex;flex-direction:column;gap:10px;}
+  .tabbar-wrap{display:flex;flex-direction:column;}
+  .tabbar{display:flex;gap:3px;}
+  .tab{display:inline-flex;align-items:center;gap:8px;border-radius:6px 6px 0 0;padding:8px 13px 9px;border:1px solid var(--rule-hairline);border-bottom:none;}
+  .tab.active-dark{background:#1E1C22;border-color:var(--rule-medium);}
+  .tab.active-paper{background:#F4F1EA;border-color:rgba(24,23,27,0.12);}
+  .tab.idle{background:#121116;border-color:var(--rule-hairline);}
+  .tab img{width:15px;height:15px;border-radius:2px;}
+  .tab .tt-dark{font-size:10.5px;color:var(--text-secondary);white-space:nowrap;}
+  .tab .tt-paper{font-size:10.5px;color:#4A4751;white-space:nowrap;}
+  .tab .x{color:var(--text-tertiary);font-size:10px;margin-left:2px;}
+  .tabpage-dark{height:7px;background:#1E1C22;border:1px solid var(--rule-medium);border-top:none;border-radius:0 0 3px 3px;}
+  .tabpage-paper{height:7px;background:#F4F1EA;border:1px solid rgba(24,23,27,0.12);border-top:none;border-radius:0 0 3px 3px;}
+
+  /* note */
+  .note{font-size:12px;color:var(--text-tertiary);line-height:1.65;font-weight:300;margin-top:24px;max-width:800px;}
+  .note b{color:var(--text-secondary);font-weight:500;}
+  .note .mono{font-family:var(--font-mono);color:var(--text-secondary);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px;display:flex;align-items:center;gap:9px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#E07020;box-shadow:0 0 8px #E07020;display:inline-block;"></span>
+        Brand Mark · Unified
+      </div>
+      <h1>Logo &amp; Favicon</h1>
+      <p>One mark, two surfaces. The orange→gold gradient Q is the identity anchor — same glyph, same stroke weight, same gradient. Dark graphite tile for cinematic contexts; cream paper tile for documents and light surfaces. The tile changes; the mark doesn't.</p>
+    </div>
+    <div style="text-align:right;display:flex;flex-direction:column;gap:5px;">
+      <div class="coord" style="color:var(--accent-pilot);">REF · 0223-MARK</div>
+      <div class="coord" style="color:var(--text-tertiary);">UNIFIED · V3</div>
+    </div>
+  </header>
+
+  <!-- ===== UNIFIED LOCKUP ===== -->
+  <section>
+    <div class="sec-head"><span class="lab">01 — Primary Lockup</span><span class="rule"></span><span class="ref">ONE MARK · TWO SURFACES</span></div>
+
+    <div class="mark-pair">
+      <div class="mark-panel dark">
+        <div class="lockup">
+          <img src="assets/quay-favicon-heritage.svg" alt="Quay mark — dark">
+          <div>
+            <div class="word-dark">Quay</div>
+            <div class="sub dark">Designing Intelligence</div>
+          </div>
+        </div>
+        <div class="panel-meta">
+          <span class="c dark">QUAY CONCEPTS</span>
+          <span class="c dim-dark">0223 · DARK</span>
+        </div>
+      </div>
+      <div class="mark-panel paper">
+        <div class="lockup">
+          <img src="assets/quay-favicon-paper.svg" alt="Quay mark — paper">
+          <div>
+            <div class="word-paper">Quay</div>
+            <div class="sub paper">Designing Intelligence</div>
+          </div>
+        </div>
+        <div class="panel-meta">
+          <span class="c paper">QUAY CONCEPTS</span>
+          <span class="c dim-paper">0223 · PAPER</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="seam">
+      <span class="pill">Dark · #18171B</span>
+      <span class="grad-bar"></span>
+      <span class="pill">Orange → Gold · gradient-wordmark</span>
+      <span class="grad-bar"></span>
+      <span class="pill">Paper · #F4F1EA</span>
+    </div>
+
+    <p class="note">The gradient runs <b>orange (#E07020) → gold (#E4BD54)</b> across the Q on both surfaces — the brand's own <span class="mono">--gradient-wordmark</span> token pulled down to the mark level. At favicon sizes the gradient reads as warm amber; at lockup sizes it separates into the two brand tones.</p>
+  </section>
+
+  <!-- ===== FAVICON AT SIZE ===== -->
+  <section>
+    <div class="sec-head"><span class="lab">02 — Favicon at Size</span><span class="rule"></span><span class="ref">DARK · SHIPPED DEFAULT</span></div>
+    <div style="display:flex;gap:60px;align-items:flex-start;flex-wrap:wrap;">
+
+      <div>
+        <div class="frame-label" style="margin-bottom:16px;">Dark — quay-favicon.svg (default)</div>
+        <div class="fav-strip">
+          <div class="fav-unit"><img src="assets/quay-favicon-heritage.svg" width="96" height="96" alt=""><span class="z">96</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-heritage.svg" width="64" height="64" alt=""><span class="z">64</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-heritage.svg" width="32" height="32" alt=""><span class="z">32</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-heritage.svg" width="16" height="16" alt=""><span class="z">16</span></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="frame-label" style="margin-bottom:16px;">Paper — quay-favicon-paper.svg</div>
+        <div class="fav-strip">
+          <div class="fav-unit"><img src="assets/quay-favicon-paper.svg" width="96" height="96" alt=""><span class="z">96</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-paper.svg" width="64" height="64" alt=""><span class="z">64</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-paper.svg" width="32" height="32" alt=""><span class="z">32</span></div>
+          <div class="fav-unit"><img src="assets/quay-favicon-paper.svg" width="16" height="16" alt=""><span class="z">16</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TAB MOCKS ===== -->
+  <section>
+    <div class="sec-head"><span class="lab">03 — Browser Tab</span><span class="rule"></span><span class="ref">BOTH SURFACES</span></div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap;">
+
+      <div class="tab-group">
+        <div class="frame-label">Dark browser chrome</div>
+        <div class="tabbar-wrap">
+          <div class="tabbar">
+            <div class="tab active-dark">
+              <img src="assets/quay-favicon-heritage.svg" alt="">
+              <span class="tt-dark">Quay Concepts</span>
+              <span class="x">×</span>
+            </div>
+            <div class="tab idle">
+              <span class="tt-dark" style="color:var(--text-tertiary);">Resume</span>
+              <span class="x">×</span>
+            </div>
+          </div>
+          <div class="tabpage-dark"></div>
+        </div>
+      </div>
+
+      <div class="tab-group">
+        <div class="frame-label">Light browser chrome</div>
+        <div class="tabbar-wrap">
+          <div class="tabbar">
+            <div class="tab active-paper">
+              <img src="assets/quay-favicon-paper.svg" alt="">
+              <span class="tt-paper">Quay Concepts</span>
+              <span class="x" style="color:#8A8690;">×</span>
+            </div>
+            <div class="tab" style="background:#ECE8DF;border-color:rgba(24,23,27,0.08);border-bottom:none;border-radius:6px 6px 0 0;padding:8px 13px 9px;">
+              <span class="tt-paper" style="color:#8A8690;">Resume</span>
+              <span class="x" style="color:#8A8690;">×</span>
+            </div>
+          </div>
+          <div class="tabpage-paper"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
