@@ -1,6 +1,6 @@
 # Jennifer Quay Minnich
 
-- **Location**: Miami, Florida (Remote, EST)
+- **Location**: Miami, Florida
 - **Email**: quay@quay-cncpts.com
 - **LinkedIn**: jennifer-quay-minnich
 - **Phone**: 347-844-1684 (text)
@@ -9,63 +9,61 @@
 
 ## Summary
 
-ML/AI Engineer | ICML 2026 co-author | 9+ years shipping production software | 4+ years LLM and ML Laboratory Directed Research + Development | 3+ years building AI systems and governance infrastructure for US federal government
+Senior AI & Data Engineer | International Conference on Machine Learning (ICML) 2026 co-author | 9+ years shipping production software, from SaaS to AI | developed AI and data systems for DHS, HHS, and DOE | designed data architecture, PostgreSQL governance databases, and the retrieval layer powering RAG knowledge platforms | led technical direction across public and private platforms | Public Trust clearance
 
 ## Credentials
 United States Citizen | Public Trust Clearance | 9+ yrs of Software Engineering
 
 ## Education
-B.S., M.S. in Computer Science (Machine Learning focus)
+B.S., M.S. in Computer Science, Machine Learning focus
 
 ---
 
 ## Technical Proficiency
 
-- **Programming**: Python, SQL, Bash/Shell
-- **ML Frameworks**: PyTorch, TensorFlow, Scikit-learn, XGBoost, Hugging Face, PEFT, LoRA
-- **ML & Data Science**: Neural Networks, Model Evaluation, ETL, Data Governance, Data Cleansing, Feature Engineering, Statistical Modeling, Training + Fine Tuning
-- **LLMs**: OpenAI, Claude, Gemini, Llama, Prompt Engineering, RAG, Agent Workflows, MCP, Endpoint Evaluation
-- **NLP & Retrieval**: LangChain, LlamaIndex, FAISS, BERT, Sentence Transformers
-- **AI**: Agentic Systems,  Automation, Governance, Red Team Testing, Model Alignment, Responsible AI
-- **Cloud & Infrastructure**: GCP (Vertex AI, BigQuery), AWS (Lambda, S3, SageMaker, Bedrock), Azure (ML Studio, Blob Storage, Functions), CUDA, Distributed Training
-- **CI/CD & MLOps**: Git, GitHub Actions, Docker, Kubernetes, Weights & Biases, MLflow, Drift Monitoring, Loss Tracking, Model Versioning
-- **Visualization & Dashboarding**: Tableau, Power BI, Plotly/Dash, Matplotlib, Seaborn, Grafana
+- **Languages**: Python, SQL, Bash/Shell
+- **ML & Deep Learning**: PyTorch, scikit-learn, Pandas, NumPy, TensorFlow, XGBoost, Hugging Face
+- **LLMs & Frameworks**: Claude, OpenAI, LangChain, LangGraph, LangSmith, MCP, fine-tuning open-source LLMs (LLaMA)
+- **RAG & LLM Evaluation**: RAG, semantic search over vector DBs, prompt engineering, model evaluation, accuracy optimization, hallucination evaluation (semantic similarity), LLM-as-a-judge groundedness, token-cost reduction
+- **Data & Storage**: PostgreSQL, MongoDB, Databricks, BigQuery, Pinecone, Elasticsearch, FAISS
+- **Data Engineering & Pipelines**: custom Python ETL, data ingestion & throughput, pipeline orchestration, schema validation, data quality, medallion lakehouse, crosswalk normalization, data governance
+- **Cloud**: Azure (OpenAI, AI Foundry, ML Studio), AWS (Bedrock, SageMaker, Lambda, S3), GCP (Vertex AI), cost optimization
+- **MLOps & Deployment**: Docker, Kubernetes, FastAPI, Git/GitHub Actions, Jenkins, Harness, MLflow, Weights & Biases; model versioning, drift monitoring, red-teaming, alignment, responsible AI
+- **Full-Stack & Visualization**: Node.js, React, Three.js/WebGL, REST APIs, Tableau, Power BI, Grafana
 
 ---
 
 ## Publication
 
-**2026** | Minnich, Jennifer, Q. (co-author) | "Stream Recursion Model: A Novel LLM Architecture" | Submitted to ICML 2026. Research funded by Sandia National Labs (DOE). Under review.
+**2026** | Minnich, Jennifer Q. (co-author) | "Stream Recursion Model: A Novel LLM Architecture" | Submitted to ICML 2026. An interpretable architecture that matches GPT-2 performance at half the parameters via recursively refined latent streams. Research funded by Sandia National Labs (DOE). Under review.
 
 ---
 
 ## Experience
 
-### ML/AI Engineer, Senior Data Scientist | Arch Systems Inc. | Nov 2024 - present
+### Senior AI & Data Engineer | Arch Systems Inc. | Nov 2024 - present
 Baltimore, MD (Remote) | Federal contractor
 
-- Identified $9M+ in cost savings for DHS-USCIS by developing the enterprise architecture Technical Reference Model, consolidating 15 ungoverned data sources into a single authoritative governance database.
-- Patent pending: JENNY, an Intelligent Document Generator with smart architecture that reduces LLM token usage by 88% and cuts document generation costs by 15-25x. Nominated for the 2026 Emerging Technology and Innovation Awards.
-- Delivered cross-model security evaluation for DHS internal chatbot deployment, comparing OpenAI and Anthropic on performance, security, compliance, and mission fit.
-- Evaluated Credal AI platform across 150 pilot users for HHS-ACF Chief AI Officer, producing a suite of analytics that informed enterprise purchase decision.
-- Built the AI Constitution Testing framework for HHS-ACF Chief AI Officer, with 15+ testing strategies and red team datasets for child welfare policy compliance.
-- Automated DHS-FEMA operational reporting and ACF-OHS helpdesk ticket routing, reducing hours of manual lift for personnel.
+- Architected the enterprise AI application that consolidated disparate USCIS IT systems into one platform - identifying $9M+ in savings through its Technical Reference Module governance layer.
+- Built JENNY, a split-phase document generator that cut LLM token cost 88% and per-document cost 15-25x. Winner, 2026 FORUM Innovation Award.
+- Set the data architecture and design-review standards across two federal platforms and mentored the engineers building them.
+- Built LLM security and compliance testing for federal AI systems - cross-model evaluation (OpenAI vs Anthropic), jailbreak resilience, and 15+ red-team strategies against agency policy and compliance boundaries.
 
 ### Machine Learning Engineer | ICASA (NMT) | Jan 2022 - Nov 2024
-Socorro, NM (Remote) | Federal contractor for DOE | Government Contractor for the State of New Mexico
+Socorro, NM (Remote) | Federal contractor for DOE | Institutional research and development
 
-- Co-authored novel LLM architecture (Stream Recursion Model) submitted to ICML 2026, funded by Sandia National Labs/DOE. Achieved GPT-2 performance at half the parameters.
-- Secured $1M state funding for healthcare workforce dashboard by building a central source of truth database and analyzing coverage gaps statewide.
-- Deployed the Basic Needs NLP analysis and reporting tool, supporting the statewide effort of New Mexico Higher Education Institution. 7k open ended survey responses on food and housing insecurity were analyzed with Natural Language Processing and used in statewide policy decisions including increased access to food pantries and safe housing.
-- Achieved 92.5% accuracy on natural language to SQL generation against 14 years of state tax data, benchmarking three approaches (fine-tuned Llama 2, LangChain, LlamaIndex).
-- Delivered ML training series to cross-functional teams, accelerating internal adoption of ML and AI tooling across the organization.
+- Co-authored a novel LLM architecture (Stream Recursion Model) submitted to ICML 2026, funded by Sandia National Labs/DOE. Splitting computation across interacting latent streams makes each stream's dynamics, causal contribution, and routing directly measurable - exposing the model's internal reasoning where transformers stay a black box.
+- Secured $1M in funding for the Healthcare Workforce Dashboard by building a single source-of-truth database (10+ state and regional data systems, plus market-analysis data) and analyzing statewide coverage gaps.
+- Turned thousands of open-ended survey responses on food and housing insecurity into statewide policy and budget decisions, building the pre-LLM transformer NLP pipeline that surfaced the themes.
+- Built a natural-language-to-SQL chatbot at 92.5% accuracy over historical state tax and financial data, letting users query and understand complex data in plain language.
+- Ran an internal ML/AI training series for engineering and analytics teams, standardizing how the org builds and evaluates LLM tooling.
 
 ### Data Scientist | ICASA (NMT) | Feb 2020 - Jan 2022
-Socorro, NM (Remote) | Government Contractor for the State of New Mexico
+Socorro, NM (Remote) | Federal contractor for DOE | Institutional research and development
 
-- Hired full-time after internship based on performance and traction of instiitutional research in ML and AI.
-- Research fellow on the Laboratory Directed Research and Development project Gold Pickaxe, studied entity relationships of Github events with graph neural networks and predicted next events.
-- Built Computer Science department reporting tool with statistical analysis (regression, correlative) that informed enrollment strategy and research funding allocation.
+- Hired full-time after internship on the strength of early ML and AI research traction.
+- Built graph neural networks modeling relationships between GitHub events to predict next-event activity.
+- Built the Computer Science department reporting tool that analyzed enrollment and funding allocation with statistical and ML methods.
 
 
 ### Software Engineer | Consumer 51 | Apr 2017 - Feb 2020
@@ -73,12 +71,13 @@ Philadelphia, PA (Remote) | International consumer technology consultant
 
 - Shipped full-stack web applications (Python, JavaScript, SQL) for enterprise e-commerce clients across international markets.
 - Built consumer analytics dashboards in Tableau tracking sales and behavior patterns across multiple product lines.
-- Engineered algorithmic trading toolkit integrating Robinhood API, federal economic data feeds, and backtesting engine.
+- Engineered an algorithmic trading toolkit integrating Robinhood API, federal economic data feeds, and a backtesting engine.
 
 ### Founder, Principal Consultant | Quay Concepts | Jan 2017 - present
 Remote
 
-- Founded C2C consulting practice offering AI/ML services, analytics acceleration, and full-stack web development to federal, state, and private sector clients.
+- Founded a consulting practice offering AI/ML services, analytics acceleration, and full-stack web development.
+- Built interactive React/WebGL prototypes, SVG visuals, and design systems, and reviewed UI/UX assets and UI kits for AI products.
 
 ---
 
@@ -86,95 +85,56 @@ Remote
 
 ### Data/AI Implementations - Federal Government
 
-**2026 | DHS - USCIS Technical Reference Model Enterprise Architecture Analytics**
-- Produced enterprise governance analytics identifying $9M+ in combined savings across contract optimization ($7.5M) and cloud idle resources ($1.5M) for DHS.
-- Demonstrated TRM value through Optical Character Recognition (OCR)/ Intelligent Document Processing (IDP) category analysis: 144 fragmented product names across 6 data sources,revealing ungoverned spend and redundant AI tools.
-- Built endpoint consolidation analysis quantifying cost of multi-tool inventory conflicts across 143 products, making the business case for a single authoritative data source.
+**2026 | U.S. Army HAWKEYE-DQ - Data-Quality Error Bot (IPPS-A)**
+- Architected a medallion lakehouse (Bronze/Silver/Gold) that lands raw Army HR and pay data exactly as received, then validates it - catching defects before they reach downstream systems.
+- Designed a two-track validation flow that quarantines untrustworthy rows and flags fixable ones, then routes each defect to an owner with a recommended fix.
+- Built the ingestion and validation pipeline across 40+ Army data interfaces (~25 inbound, ~17 outbound) in PostgreSQL with custom Python ETL and full source/load lineage - automated schema validation held the data error rate to 0.015%.
 
-**2026 | DHS - USCIS Technical Reference Model Pipeline & Data Governance Standardization**
+**2026 | DHS-USCIS Technology Reference Model (TRM)**
+- Built the TRM in PostgreSQL - consolidated ~20 disparate data sources into a normalized 45-table schema fed by an ETL pipeline (APIs, scripts, manual extracts) with a crosswalk normalization layer resolving each source to canonical master records.
+- Generalized the crosswalk into Temper, reusable normalization IP - a resolver with a built-in audit trail that makes every record match traceable and defensible.
+- Produced the governance analytics behind the $9M+ in savings ($7.5M contract consolidation + reduction, $1.5M cloud idle).
+- Standardized how DHS approves AI/ML software for use, aligning the TRM's review criteria to FEAF and NIST.
 
-- Built USCIS Technical Reference Model (TRM) in PostGreSQL, consolidating ~15 disparate data systems into a normalized database via ETL pipeline using APIs, scripts, and manual extracts.
-- Developed universal data dictionary standardizing cross-system terminology and schema across all consolidated sources (crosswalk).
-- Standardized adjudication policy for AI/ML software requests within the TRM framework implementing FEAF and NIST policies.
+**2026 | DHS-USCIS Enterprise AI Architecture**
+- Unified idea and demand management, the Technology Reference Model, budgeting, analytics, and dashboards into one enterprise platform, replacing disparate IT inventory systems and disconnected operational pipelines.
+- Built the data and ML pipelines feeding 5 production models, cutting downstream model drift and accelerating deployment 25%.
 
-**2026 | DHS - FEMA FIWA SOP Generator (JENNY)**
-- Developed AI-powered SOP generation tool automating the creation of compliant Standard Operating Procedures from agency templates, unstructured text, and written instructions.
-- Designed a hybrid architecture with a Python-based execution sequence, limiting LLM usage and reducing token costs by 88% compared to a monolithic LLM tool.
-- Benchmarked pipeline across multiple LLMs evaluating cost, latency, and accuracy to identify optimal model configuration.
-- Validated 100% compliance against agency SOP templates with PII redaction.
-
-**2026 | DHS - USCIS Internal Chatbot Security Evaluation**
-
-- Evaluated two internal USCIS chatbot platforms built on OpenAI and Anthropic, assessing endpoint behavior, persona constraints, training limitations, and federal compliance boundaries beyond raw model performance.
-- Produced testing playbook covering endpoint testing, persona validation, workspace security labels, and jailbreak evaluation.
-
-**2026 | DHS - FEMA Ops Brief Generator**
-- Automated FEMA operational brief generation (weekly) by building Python pipeline combining PDF class schedules, Excel Board workbook, and In-Processing schedule data from three source systems.
-- Eliminated manual data compilation for operational reporting, standardizing field mapping across disparate source formats.
-
-**2026 | ACF - OHS IT-AMS Helpdesk Automation**
-
-- Built Zendesk automation system routing 150 monthly tickets across 7 developers using macros, triggers, and webhooks.
-- Automated live dashboards and ticket reporting for external teams and stakeholders.
-
-**2026 | ACF - OHS IT-AMS Data/AI Strategy**
-
-- Developed current-to-future state strategy and executive presentation for IT-AMS system modernization with ML and AI integration.
-- Presented implementation roadmap to executive leadership for transitioning legacy system to AI-enabled infrastructure.
+**2026 | DHS-FEMA FIWA SOP Generator (JENNY)**
+- Split the pipeline so the LLM only extracts content while deterministic Python handles template execution; benchmarked across multiple LLMs for cost, latency, and accuracy.
+- Validated 100% structural compliance against agency SOP templates across 82-84 gates per document, with PII redaction.
 
 **2025 | HHS - ACF AI Constitution Testing & Alignment Framework**
-- Developed comprehensive testing framework evaluating LLM compliance with ACF mission requirements ('Constitution') for child and family services.
-- Conducted technical evaluation of enterprise testing platforms (Promptfoo, Deepeval) with Credal AI integration for HHS-ACF.
-- Built compliant automated testing pipeline implementing 15+ testing strategies including AI alignment for ACF policy compliance.
-- Generated red team test datasets using ACF-specific policy constraints and child safety requirements.
-- Created reusable evaluation templates enabling rapid deployment across multiple federal use cases, reducing testing cycle time.
+- Developed an endpoint-testing framework that evaluates agentic LLMs against ACF mission requirements (the 'Constitution') for child and family services.
+- Evaluated LLM testing platforms (Promptfoo, Deepeval) against ACF's compliance needs and recommended the integration path.
+- Built the automated testing pipeline behind it - 15+ strategies and ACF-specific red-team datasets probing each model endpoint for policy and child-safety compliance.
 
-**2025 | HHS-ACF Credal AI Platform Evaluation & Usage Analytics**
-- Evaluated enterprise viability of Credal AI across 150 pilot users under the Chief AI Officer, analyzing volume metrics (daily/weekly active users, session duration, API calls) and context patterns (use case mapping, feature adoption, and model utilization).
-- Engineered memory-optimized star schema via Tableau Hyper API, automating daily ingestion of *millions* of Credal AI logs with Python-based validation, cleaning, and statistical analysis pipeline.
-- Applied user behavior clustering algorithms (k-means, hierarchical) to identify adoption patterns and segment user cohorts by engagement level and use case.
-- Built automated Tableau dashboard providing executive-level insights for enterprise purchase decision.
-
-**2025 | HHS-ACF Know Your Customer LLM Service Classification**
-
-- Evaluated LLM effectiveness for classifying services provided by ACF grantees, benchmarking accuracy and efficiency across models (Perplexity, SageMaker, ChatGPT, Claude).
-- Developed strategic scaling approach for automated service classification across ACF's thousands of grantees.
+**2025 | HHS-ACF Credal AI Usage Analytics**
+- Built the real-time ETL pipeline feeding an executive Tableau dashboard - a memory-optimized star schema (Tableau Hyper API) that ingested and validated millions of platform logs as they streamed in.
+- Analyzed both structured usage and unstructured prompt text - k-means and hierarchical clustering on user cohorts, plus topic modeling and semantic-similarity analysis of user prompts.
 
 ### FinTech Projects using Machine Learning
 
-**2022 | Classification of Malicious Cyber Activity via Machine Learning**
-- Developed feature engineering and encoding strategies, implementing Isolation Forest algorithms to categorize events as routine or anomalous.
-- Evaluated model performance using Scikit-learn with dimensionality reduction (t-SNE), confusion matrices, and AUC-ROC analysis.
-
 **2022 | Stock Bought Stock Trading Project**
-- Engineered algorithmic trading toolkit integrating Robinhood API, federal economic data feeds, backtesting engine, and live execution with PyQt GUI.
-- Applied correlative and predictive statistics to validate and optimize trading strategies.
+- Engineered an algorithmic trading toolkit (Robinhood API, federal economic data, backtesting, live execution via PyQt), tuning strategies with correlation and regression analysis over historical market data.
 
 ### Higher Education & State Funded Data/AI Projects
 
 **2024 | NM Higher Ed Basic Needs Analysis with NLP**
-- Built transformer-based NLP pipeline (DistilBERT, BERTopic, KeyBERT) analyzing 7k open-ended survey responses on food and housing insecurity.
-- Deployed as Kubernetes-hosted React dashboard with Docker containerization and Helm charts.
-- Created real-time data exploration of keywords and themes using drill-down visualizations and FastAPI.
+- Evaluated student food- and housing-insecurity survey data with a transformer-based NLP pipeline - DistilBERT sentiment, BERTopic topic modeling, KeyBERT keyword extraction.
+- Deployed as a containerized Kubernetes dashboard (Docker, Helm) with FastAPI-served drill-down exploration of keywords and themes.
 
 **2023 | Natural Language Interface for NM Tax Data**
-- Fine-tuned Meta AI Llama 2 using HuggingFace and PyTorch, achieving 92.5% accuracy for NL-to-SQL generation.
-- Implemented LlamaIndex and LangChain for optimized RAG.
-- Deployed on GCP Vertex AI with MongoDB document store.
+- Fine-tuned Llama 2 (HuggingFace, PyTorch) for NL-to-SQL at 92.5% accuracy.
 
 
 ### Research & Development
 
 **2026 | Stream Recursion Model (SRM): A Novel LLM Architecture**
-- Co-authored novel LLM architecture introducing stream-wise attention for learnable inter-stream communication, achieving GPT-2 performance at half the parameters (68M vs 124M). ICML 2026, funded by Sandia National Labs/ DOE.
-- Analysis revealed hub-like stream routing topology and specialized stream behavior, with top 9 of 32 streams accounting for 50% of causal impact through ablation studies.
-- Trained three model variants (SRM-base, SRM-med, SRM-large up to 454M params) on OpenWebText using a single 4xL40s GPU cluster over ~1000 GPU hours.
+- Co-authored SRM, an interpretable LLM architecture that organizes computation into interacting latent streams updated through recursive refinement, exposing internal structure - stream dynamics, causal contribution, and routing.
+- A practical foundation for scalable mechanistic interpretability - analysis shows consistent, structured specialization across streams. ICML 2026 (under review); funded by Sandia National Labs/DOE.
 
-**2023 | Analysis of GitHub Repositories using Neural Networks**
-- Mined 4GBs of GitHub public user data into JSON format using Python (Pandas, NumPy).
-- Built and trained TensorFlow neural network models profiling repository users.
-- Predicted next user activity from repository behavior patterns.
-
+### Additional Projects (full summaries on request)
 
 ---
 

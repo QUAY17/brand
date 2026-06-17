@@ -42,8 +42,8 @@ def set_run_font(run, size=10, bold=False, color=COLOR_BLACK, name=FONT_NAME):
 def add_section_heading(doc, text):
     """Add an orange section heading with a bottom rule."""
     para = doc.add_paragraph()
-    para.space_before = Pt(8)
-    para.space_after = Pt(2)
+    para.paragraph_format.space_before = Pt(8)
+    para.paragraph_format.space_after = Pt(2)
     run = para.add_run(text.upper())
     set_run_font(run, size=11, bold=True, color=COLOR_ACCENT)
     # Thin bottom border via paragraph border XML
@@ -72,8 +72,8 @@ def add_bullet(doc, text, indent=0.25):
 def add_entry_header(doc, left_text, right_text=""):
     """Add a bold entry header with optional right-aligned date."""
     para = doc.add_paragraph()
-    para.space_before = Pt(6)
-    para.space_after = Pt(1)
+    para.paragraph_format.space_before = Pt(6)
+    para.paragraph_format.space_after = Pt(1)
     run = para.add_run(left_text)
     set_run_font(run, size=10, bold=True)
     if right_text:
@@ -110,6 +110,23 @@ def generate_docx(resume: dict, output_path: str):
         section.bottom_margin = Inches(0.5)
         section.left_margin = Inches(0.6)
         section.right_margin = Inches(0.6)
+
+    # -- Compact baseline: Word's default Normal (10pt space-after, 1.15 line)
+    #    is what blows the resume past 2 pages. Tighten it once, globally. --
+    normal = doc.styles["Normal"]
+    normal.font.name = FONT_NAME
+    normal.font.size = Pt(9.5)
+    npf = normal.paragraph_format
+    npf.space_before = Pt(0)
+    npf.space_after = Pt(0)
+    npf.line_spacing = 1.0
+    try:
+        bpf = doc.styles["List Bullet"].paragraph_format
+        bpf.space_before = Pt(0)
+        bpf.space_after = Pt(0)
+        bpf.line_spacing = 1.0
+    except KeyError:
+        pass
 
     # -- Name --
     name = f"{resume['name_first']} {resume['name_last']}"
@@ -208,8 +225,8 @@ def generate_docx(resume: dict, output_path: str):
         add_section_heading(doc, "Notable Projects")
         for subsection, projects in resume["notable_projects"].items():
             para = doc.add_paragraph()
-            para.space_before = Pt(6)
-            para.space_after = Pt(2)
+            para.paragraph_format.space_before = Pt(6)
+            para.paragraph_format.space_after = Pt(2)
             run = para.add_run(subsection)
             set_run_font(run, size=10, bold=True, color=COLOR_ACCENT)
 
