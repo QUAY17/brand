@@ -18,3 +18,15 @@ republishing the Pages site to recover.
   changes, the `CNAME` goes wherever Pages serves from and nothing else.
 - Never delete `CNAME` "to clean up." It controls the live domain.
 - A change scoped to design (favicon, CSS, copy) must not touch this file.
+
+## Enforcement
+
+A pre-commit hook in `.githooks/pre-commit` blocks any commit that deletes or
+moves `CNAME`. Git's `core.hooksPath` is local config and does not survive a
+fresh clone, so activate it once after cloning:
+
+    git config core.hooksPath .githooks
+
+To intentionally change the domain config, override for that one commit:
+
+    ALLOW_CNAME_CHANGE=1 git commit ...

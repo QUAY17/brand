@@ -1,0 +1,38 @@
+#!/bin/sh
+# Guardrail: block commits that delete or move the load-bearing CNAME file.
+#
+# GitHub Pages reads CNAME on every build and syncs the repo's custom-domain
+# setting from it. Deleting it, or moving it out of the served folder, drops
+# the custom domain (www.quay-cncpts.com) and can leave it in a stuck
+# "already taken" state that only the GitHub UI / Support can release.
+# A favicon/reorg change once did exactly this. See CNAME.README.md.
+#
+# Override (only when you genuinely mean to change the domain config):
+#   ALLOW_CNAME_CHANGE=1 git commit ...
+
+if [ "$ALLOW_CNAME_CHANGE" = "1" ]; then
+    exit 0
+fi
+
+# Detect staged deletions (D) or renames (R) where CNAME is the source path.
+# --diff-filter=DR limits to deleted/renamed entries; -M detects renames.
+offending=$(git diff --cached --name-status --diff-filter=DR -M | awk '
+    $1 == "D"        && $2 == "CNAME" { print; next }
+    $1 ~ /^R[0-9]*$/ && $2 == "CNAME" { print; next }
+')
+
+if [ -n "$offending" ]; then
+    echo "BLOCKED: this commit deletes or moves the CNAME file." >&2
+    echo >&2
+    echo "  $offending" >&2
+    echo >&2
+    echo "CNAME is load-bearing: GitHub Pages uses it for the custom domain" >&2
+    echo "www.quay-cncpts.com. Moving or deleting it breaks the live site." >&2
+    echo "See CNAME.README.md." >&2
+    echo >&2
+    echo "If you truly intend to change the domain config, re-run with:" >&2
+    echo "  ALLOW_CNAME_CHANGE=1 git commit ..." >&2
+    exit 1
+fi
+
+exit 0
