@@ -36,19 +36,14 @@ Some projects have restricted disclosure levels. Before writing about any projec
 
 ## Resume Workflow
 
-The resume source of truth is `resume/resume-source.md`. To generate LaTeX:
+The resume lives entirely as designed HTML in `design_handoff_resume/source/`. There is no LaTeX/Markdown pipeline -- the old `resume/resume-source.md` plus the `md_to_latex_resume.py` / `md_to_docx_resume.py` converters were retired. Two surfaces, two postures:
 
-```
-cd resume
-python md_to_latex_resume.py --input resume-source.md --output jennifer.tex
-```
+- **`index.html`** -- general / AI-engineering posture. Content is data-driven from `source/resume-data.js` (`window.RESUME_DATA`); edit that file to change content.
+- **`index-healthcare.html`** -- healthcare / Health-IT posture (simplified header, trimmed to the health-relevant work). **Self-contained**: its `window.RESUME_DATA` is inlined in the HTML, so edit the content directly inside `index-healthcare.html`.
 
-When updating the resume:
-1. Edit `resume-source.md` only
-2. Run the converter to regenerate LaTeX (and `python md_to_docx_resume.py` for the ATS `.docx`)
-3. Apply brand voice guidelines to any new bullets
+Both render in the browser (React/Babel via CDN) and export to PDF with the toolbar's **Save / Print PDF** button -- keep the print dialog Margins at Default so the `@page` rules apply. The design is high-fidelity and settled; **content and posture are the only things iterating.** Apply the brand voice guidelines to any new bullets, and run the `brand-voice-reviewer` / `copy-editor` subagents before anything ships.
 
-**Two resume surfaces, keep them in sync.** There is also a designed web/print resume in `design_handoff_resume/` whose content lives in `source/resume-data.js` (`window.RESUME_DATA`). The design is high-fidelity and settled; **content is the only thing iterating.** Any content change to `resume-source.md` should be mirrored into `resume-data.js` (and vice versa), in the same restrained register. The designer's `README.md` carries its own brand-voice rules -- they agree with `.claude/brand-voice-guidelines.md`.
+These two surfaces are **independent postures, not mirrors -- do not force-sync them.** A change meant for both must be made in each place (`resume-data.js` and the inline data in `index-healthcare.html`). The designer's `design_handoff_resume/README.md` carries its own brand-voice rules -- they agree with `.claude/brand-voice-guidelines.md`.
 
 ## Subagents & Output Style
 
