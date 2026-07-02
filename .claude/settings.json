@@ -8,7 +8,16 @@
       "Bash(cp claude-code-setup/resume/md_to_latex_resume.py resume/)",
       "Bash(rm resume-source.md md_to_latex_resume.py jennifer_generated.tex)",
       "Bash(rm -rf claude-code-setup)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "mcp__claude_ai_Gmail__create_draft",
+      "Bash(gh auth *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -c credential.helper='!gh auth git-credential' push origin main)",
+      "Bash(git -c credential.helper='!gh auth git-credential' push https://github.com/QUAY17/brand.git main)",
+      "Bash(curl -sS -o /dev/null -w \"http %{http_code}\\\\n\" https://quay-cncpts.com/)",
+      "Bash(curl -sS -o /dev/null -w \"http %{http_code}\\\\n\" https://www.quay-cncpts.com/)",
+      "Bash(curl -sS -o /dev/null -w \"http %{http_code}\\\\n\" https://quay17.github.io/brand/)"
     ]
   }
 }
