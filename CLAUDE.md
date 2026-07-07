@@ -26,7 +26,7 @@ Key rules:
 - **Dense tool lists belong in the resume's Technical Proficiency section only**, never stacked inside prose bullets or the summary.
 - **Apply the Jargon Test before writing any bullet:** could a non-technical hiring manager understand what was done and why it mattered? If it only parses for someone who already knows the work, rewrite it in plain language.
 - **Understated register.** Secure confidence, not self-promotion -- let the work speak. No marketing adjectives ("innovative", "cutting-edge", "robust"/"scalable" without evidence), no filler endings ("enabling executive-level decision-making").
-- When in doubt, prefer the register in `design_handoff_resume/source/resume-data.js` and the "Brand voice rules" in `design_handoff_resume/README.md` -- that is the calibrated target.
+- When in doubt, prefer the register in the content master `resume/JENNIFER_QUAY_MINNICH_fin.md` -- that is the calibrated target.
 
 ## Project Disclosure
 
@@ -36,14 +36,15 @@ Some projects have restricted disclosure levels. Before writing about any projec
 
 ## Resume Workflow
 
-The resume lives entirely as designed HTML in `design_handoff_resume/source/`. There is no LaTeX/Markdown pipeline -- the old `resume/resume-source.md` plus the `md_to_latex_resume.py` / `md_to_docx_resume.py` converters were retired. Two surfaces, two postures:
+The resume + cover letter are the **"Brass Sysbar" design** (Syne / Manrope / JetBrains Mono; brass + pilot-cyan). The design lives in the bound Claude Design project (reached via the `DesignSync` MCP, which only authorizes in Claude Code Web -- not a local VSCode session) and is exported into `resume/` (gitignored, local only):
 
-- **`index.html`** -- general / AI-engineering posture. Content is data-driven from `source/resume-data.js` (`window.RESUME_DATA`); edit that file to change content.
-- **`index-healthcare.html`** -- healthcare / Health-IT posture (simplified header, trimmed to the health-relevant work). **Self-contained**: its `window.RESUME_DATA` is inlined in the HTML, so edit the content directly inside `index-healthcare.html`.
+- `resume/Resume - Brass Sysbar.dc.html` and `resume/Cover Letter - Brass Sysbar.dc.html` -- Design-Component sources; they need `resume/support.js` to render.
+- Self-contained bundled `.html` exports (fonts embedded) for sending / printing.
+- **`resume/JENNIFER_QUAY_MINNICH_fin.md`** -- the editable **content master** and source of record for the 3-page general resume. Edit content here.
 
-Both render in the browser (React/Babel via CDN) and export to PDF with the toolbar's **Save / Print PDF** button -- keep the print dialog Margins at Default so the `@page` rules apply. The design is high-fidelity and settled; **content and posture are the only things iterating.** Apply the brand voice guidelines to any new bullets, and run the `brand-voice-reviewer` / `copy-editor` subagents before anything ships.
+Export to PDF with the toolbar's **Save / Print PDF** button -- keep the print dialog Margins at Default so the `@page` rules apply. The design is settled; **content is the only thing iterating.** Apply the brand voice guidelines to any new bullets and run the `brand-voice-reviewer` / `copy-editor` subagents before anything ships. There is no LaTeX/Markdown converter pipeline (the old `resume-source.md` plus the `md_to_latex_resume.py` / `md_to_docx_resume.py` converters were retired).
 
-These two surfaces are **independent postures, not mirrors -- do not force-sync them.** A change meant for both must be made in each place (`resume-data.js` and the inline data in `index-healthcare.html`). The designer's `design_handoff_resume/README.md` carries its own brand-voice rules -- they agree with `.claude/brand-voice-guidelines.md`.
+The earlier **"Hairline Pilot"** design (Inter / IBM Plex Mono, pilot-cyan + gold, 7 sections) is **retired** -- archived at `resume/_hairline-pilot-retired/`. Do not build off it.
 
 ## Subagents & Output Style
 
